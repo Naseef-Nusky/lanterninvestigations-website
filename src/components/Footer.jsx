@@ -95,7 +95,7 @@ const Footer = () => {
             <h3 className="text-base md:text-lg font-semibold mb-4 text-blue-600 text-left">Contact Us</h3>
             <div className="space-y-3 text-sm md:text-base text-gray-700">
               <div>
-                <p className="font-semibold mb-1">📍 Address</p>
+                <p className="font-semibold mb-1">📍 Head Office</p>
                 <p>HENDERSON THOMAS INVESTIGATIONS</p>
                 <p>1st Floor, 238 Kensington High St,</p>
                 <p>London W8 6SN</p>
@@ -115,7 +115,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-200 mt-6 md:mt-8 pt-6 md:pt-8">
           <div className="text-center space-y-2">
-            <div className="text-gray-500 text-xs md:text-sm">© Copyright 2025 | All Rights Reserved</div>
+            <div className="text-gray-500 text-xs md:text-sm">© Copyright {new Date().getFullYear()} | All Rights Reserved</div>
             <div className="flex flex-wrap justify-center items-center space-x-2 md:space-x-3 text-xs md:text-sm">
               <Link to="/contact" className="text-gray-500 hover:text-blue-600 transition-colors duration-300">Contact</Link>
               <span className="text-gray-300">|</span>
