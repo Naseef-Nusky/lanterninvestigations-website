@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { sendContactEnquiry } from '../../lib/sendContactEnquiry';
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: '', phone: '', email: '', message: '' });
@@ -37,37 +37,21 @@ const ContactSection = () => {
     setStatus({ sending: true, ok: null, error: '' });
     
     try {
-      const EMAILJS_CONFIG = {
-        serviceId: 'service_z9nrpnh',
-        templateId: 'template_o96o6re',
-        publicKey: 'KMtxeuThzMItKsmDc',
-      };
+      await sendContactEnquiry({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        phone: form.phone.trim(),
+        message: form.message.trim(),
+        source: 'website',
+      });
 
-      const result = await emailjs.send(
-        EMAILJS_CONFIG.serviceId,
-        EMAILJS_CONFIG.templateId,
-        {
-          title: `New Website Contact from ${form.name}`,
-          name: form.name.trim(),
-          email: form.email.trim(),
-          phone: form.phone.trim(),
-          message: form.message.trim(),
-          time: new Date().toLocaleString(),
-        },
-        EMAILJS_CONFIG.publicKey
-      );
-
-      if (result.status === 200) {
-        setStatus({ sending: false, ok: true, error: '' });
-        setForm({ name: '', phone: '', email: '', message: '' });
-        setTouched({ name: false, phone: false, email: false, message: false });
-        setSubmitTried(false);
-      } else {
-        throw new Error('Failed to send');
-      }
+      setStatus({ sending: false, ok: true, error: '' });
+      setForm({ name: '', phone: '', email: '', message: '' });
+      setTouched({ name: false, phone: false, email: false, message: false });
+      setSubmitTried(false);
     } catch (err) {
-      setStatus({ sending: false, ok: false, error: err?.text || err?.message || 'Failed to send' });
-      console.error('EmailJS Error:', err);
+      setStatus({ sending: false, ok: false, error: err?.message || 'Failed to send' });
+      console.error('Contact form error:', err);
     }
   };
 
@@ -90,7 +74,7 @@ const ContactSection = () => {
               </svg>
               <h3 className="text-xl md:text-2xl font-bold text-gray-900">Call Now</h3>
             </div>
-            <div className="text-2xl md:text-3xl font-bold text-blue-600">07826 416466</div>
+            <div className="text-2xl md:text-3xl font-bold text-blue-600">07979 359508</div>
           </div>
         </div>
 
@@ -102,7 +86,7 @@ const ContactSection = () => {
               <div className="relative">
                 <img 
                   src="/contact1.jpg" 
-                  alt="Contact Henderson Thomas Investigations" 
+                  alt="Contact Lantern Investigations" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-blue-800/10 to-indigo-900/20"></div>

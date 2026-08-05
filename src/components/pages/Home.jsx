@@ -11,7 +11,7 @@ const HomePage = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Henderson Thomas Investigations",
+    "name": "Lantern Investigations",
     "url": "https://hendersonthomasinvestigations.com",
     "description": "UK's top-rated private detective agency specializing in corporate investigations, covert surveillance, and discreet investigative services.",
     "potentialAction": {
@@ -21,10 +21,10 @@ const HomePage = () => {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Henderson Thomas Investigations",
+      "name": "Lantern Investigations",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://hendersonthomasinvestigations.com/logo.png"
+        "url": "https://hendersonthomasinvestigations.com/logo-new.png"
       }
     }
   };
@@ -32,7 +32,7 @@ const HomePage = () => {
   return (
     <>
       <SEO 
-        title="Professional Private Detective Services London | Henderson Thomas Investigations"
+        title="Professional Private Detective Services London | Lantern Investigations"
         description="UK's top-rated private detective agency specializing in corporate investigations, covert surveillance, fraud investigation, missing persons, and background checks. Professional, confidential solutions in London and across the UK."
         keywords="private detective London, private investigator UK, corporate investigations, covert surveillance, fraud investigation, missing persons, background checks, professional detective services"
         url="/"

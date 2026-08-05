@@ -6,20 +6,20 @@ const MissingPersons = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Missing Persons Investigation",
-    "description": "Professional missing persons investigation services with compassionate support. Expert tracing and location services by Henderson Thomas Investigations.",
+    "description": "Professional missing persons investigation services with compassionate support. Expert tracing and location services by Lantern Investigations.",
     "provider": {
       "@type": "Organization",
-      "name": "Henderson Thomas Investigations",
+      "name": "Lantern Investigations",
       "url": "https://hendersonthomasinvestigations.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1st Floor, 238 Kensington High St",
+        "streetAddress": "51 Lime Street",
         "addressLocality": "London",
-        "postalCode": "W8 6SN",
+        "postalCode": "EC3M 7DQ",
         "addressCountry": "GB"
       },
-      "telephone": "07826 416466",
-      "email": "private@hendersonthomasinvestigations.com"
+      "telephone": "07979 359508",
+      "email": "info@lanterninvestigations.com"
     },
     "serviceType": "Missing Persons Investigation",
     "areaServed": {
@@ -38,8 +38,8 @@ const MissingPersons = () => {
   return (
     <section className="bg-gray-50 pt-16 md:pt-20">
       <SEO 
-        title="Missing Persons Investigation - Professional Tracing Services | Henderson Thomas Investigations"
-        description="Professional missing persons investigation services with compassionate support. Expert tracing and location services by Henderson Thomas Investigations."
+        title="Missing Persons Investigation - Professional Tracing Services | Lantern Investigations"
+        description="Professional missing persons investigation services with compassionate support. Expert tracing and location services by Lantern Investigations."
         keywords="missing persons investigation, missing person search, person tracing, missing person London, tracing services UK, locate missing person, find missing person"
         url="/service/missing"
         structuredData={structuredData}
@@ -79,7 +79,7 @@ const MissingPersons = () => {
             professional missing persons investigators becomes invaluable.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            A skilled investigator, such as Henderson Thomas Investigations, has
+            A skilled investigator, such as Lantern Investigations, has
             the experience, tools, and resources needed to uncover the truth.
             Our services include tracing possible locations of missing
             individuals, locating birth parents, and ultimately helping families
@@ -90,10 +90,10 @@ const MissingPersons = () => {
         {/* Why Choose Us */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-gray-800">
-            Why Choose Henderson Thomas Investigations?
+            Why Choose Lantern Investigations?
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            When it comes to missing person investigations, Henderson Thomas
+            When it comes to missing person investigations, Lantern
             Investigations is the trusted name you can rely on. Based in London,
             we have a team of highly skilled private investigators with
             experience in handling cases across the UK, consistently achieving

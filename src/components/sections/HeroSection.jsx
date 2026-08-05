@@ -19,7 +19,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight font-mont tracking-tight">
-            Henderson Thomas Investigations
+            Lantern Investigations
           </h1>
           <p className="text-lg md:text-2xl mb-8 text-blue-100 leading-relaxed font-light">
             Specialist in private, corporate and legal investigations

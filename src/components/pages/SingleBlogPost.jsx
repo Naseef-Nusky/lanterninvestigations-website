@@ -78,21 +78,21 @@ const SingleBlogPost = () => {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
-    "description": post.excerpt ? documentToPlainTextString(post.excerpt) : "Private investigation insights and tips from Henderson Thomas Investigations",
+    "description": post.excerpt ? documentToPlainTextString(post.excerpt) : "Private investigation insights and tips from Lantern Investigations",
     "url": `https://hendersonthomasinvestigations.com/blogs/${post.slug}`,
     "datePublished": post.publishedDate,
     "dateModified": post.publishedDate,
     "author": {
       "@type": "Person",
-      "name": post.author || "Henderson Thomas Investigations"
+      "name": post.author || "Lantern Investigations"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Henderson Thomas Investigations",
+      "name": "Lantern Investigations",
       "url": "https://hendersonthomasinvestigations.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://hendersonthomasinvestigations.com/logo.png"
+        "url": "https://hendersonthomasinvestigations.com/logo-new.png"
       }
     },
     "mainEntityOfPage": {
@@ -112,9 +112,9 @@ const SingleBlogPost = () => {
   return (
     <div className="min-h-screen bg-gray-50 pt-20 md:pt-32 pb-24">
       <SEO 
-        title={`${post.title} | Henderson Thomas Investigations Blog`}
-        description={post.excerpt ? documentToPlainTextString(post.excerpt) : "Private investigation insights and tips from Henderson Thomas Investigations"}
-        keywords={`${post.title}, private investigation, detective insights, investigation tips, Henderson Thomas Investigations`}
+        title={`${post.title} | Lantern Investigations Blog`}
+        description={post.excerpt ? documentToPlainTextString(post.excerpt) : "Private investigation insights and tips from Lantern Investigations"}
+        keywords={`${post.title}, private investigation, detective insights, investigation tips, Lantern Investigations`}
         url={`/blogs/${post.slug}`}
         structuredData={structuredData}
       />
@@ -178,7 +178,7 @@ const SingleBlogPost = () => {
           <div className="bg-[#0047b2] rounded-lg p-8 text-white">
             <h2 className="text-2xl font-bold mb-4">Need Professional Investigation Services?</h2>
             <p className="text-lg mb-6">
-              Contact Henderson Thomas Investigations for confidential, professional assistance.
+              Contact Lantern Investigations for confidential, professional assistance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

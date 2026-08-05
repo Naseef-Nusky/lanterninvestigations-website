@@ -5,17 +5,17 @@ const TermsConditions = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Terms & Conditions - Henderson Thomas Investigations",
-    "description": "Terms and conditions for using Henderson Thomas Investigations services. Please read these terms carefully before using our website and services.",
+    "name": "Terms & Conditions - Lantern Investigations",
+    "description": "Terms and conditions for using Lantern Investigations services. Please read these terms carefully before using our website and services.",
     "url": "https://hendersonthomasinvestigations.com/terms-and-conditions",
     "isPartOf": {
       "@type": "WebSite",
-      "name": "Henderson Thomas Investigations",
+      "name": "Lantern Investigations",
       "url": "https://hendersonthomasinvestigations.com"
     },
     "about": {
       "@type": "Organization",
-      "name": "Henderson Thomas Investigations",
+      "name": "Lantern Investigations",
       "url": "https://hendersonthomasinvestigations.com"
     }
   };
@@ -23,9 +23,9 @@ const TermsConditions = () => {
   return (
     <div className="bg-white pt-16 md:pt-20">
       <SEO 
-        title="Terms & Conditions - Service Terms | Henderson Thomas Investigations"
-        description="Terms and conditions for using Henderson Thomas Investigations services. Please read these terms carefully before using our website and services."
-        keywords="terms and conditions, service terms, legal terms, website terms, Henderson Thomas Investigations terms, investigation service terms"
+        title="Terms & Conditions - Service Terms | Lantern Investigations"
+        description="Terms and conditions for using Lantern Investigations services. Please read these terms carefully before using our website and services."
+        keywords="terms and conditions, service terms, legal terms, website terms, Lantern Investigations terms, investigation service terms"
         url="/terms-and-conditions"
         structuredData={structuredData}
       />
@@ -69,19 +69,19 @@ const TermsConditions = () => {
           <br />
           <br />
           The site is for your personal use and is not to be used for any
-          commercial purpose. As a result, Henderson Thomas Investigations will
+          commercial purpose. As a result, Lantern Investigations will
           not be responsible in any circumstances for your loss of profits.
-          Henderson Thomas Investigations will also not be responsible for any
+          Lantern Investigations will also not be responsible for any
           loss including wasted expenditure, corruption or destruction of data
-          unless the loss results from something Henderson Thomas Investigations
+          unless the loss results from something Lantern Investigations
           has done wrong.
           <br />
           <br />
-          Henderson Thomas Investigations is not liable for any damages or
-          losses resulting from your inability to use this site. Henderson Thomas
+          Lantern Investigations is not liable for any damages or
+          losses resulting from your inability to use this site. Lantern
           Investigations cannot promise that the site will be uninterrupted or
           entirely error free. Because of the nature of the internet, the site is
-          provided on an "as available" basis. Henderson Thomas Investigations
+          provided on an "as available" basis. Lantern Investigations
           will not be responsible to you if we are unable to provide the site for
           any reason beyond our control.
         </p>
@@ -107,8 +107,8 @@ const TermsConditions = () => {
           3. Changes to the Terms
         </h2>
         <p className="text-gray-700 mb-6 text-sm md:text-base leading-relaxed">
-          Henderson Thomas Investigations may change the site or these terms at
-          any time. If you use the site after Henderson Thomas Investigations has
+          Lantern Investigations may change the site or these terms at
+          any time. If you use the site after Lantern Investigations has
           changed the terms, you will be bound by the new terms.
         </p>
 

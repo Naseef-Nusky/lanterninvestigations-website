@@ -7,22 +7,22 @@ const AboutUs = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "About Henderson Thomas Investigations",
-    "description": "Learn about Henderson Thomas Investigations, a leading private detective agency specializing in professional investigation services with discretion and expertise.",
+    "name": "About Lantern Investigations",
+    "description": "Learn about Lantern Investigations, a leading private detective agency specializing in professional investigation services with discretion and expertise.",
     "mainEntity": {
       "@type": "Organization",
-      "name": "Henderson Thomas Investigations",
+      "name": "Lantern Investigations",
       "url": "https://hendersonthomasinvestigations.com",
       "description": "Professional private investigation agency specializing in corporate investigations, covert surveillance, and discreet investigative services.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1st Floor, 238 Kensington High St",
+        "streetAddress": "51 Lime Street",
         "addressLocality": "London",
-        "postalCode": "W8 6SN",
+        "postalCode": "EC3M 7DQ",
         "addressCountry": "GB"
       },
-      "telephone": "07826 416466",
-      "email": "private@hendersonthomasinvestigations.com",
+      "telephone": "07979 359508",
+      "email": "info@lanterninvestigations.com",
       "foundingDate": "2020",
       "areaServed": {
         "@type": "Country",
@@ -76,9 +76,9 @@ const AboutUs = () => {
   return (
     <div className="pt-16 md:pt-20">
       <SEO 
-        title="About Us - Professional Private Investigators | Henderson Thomas Investigations"
-        description="Learn about Henderson Thomas Investigations, a leading private detective agency specializing in professional investigation services with discretion and expertise. Experienced investigators serving London and UK."
-        keywords="about Henderson Thomas Investigations, private detective agency, professional investigators, investigation services London, private investigation company, detective agency UK"
+        title="About Us - Professional Private Investigators | Lantern Investigations"
+        description="Learn about Lantern Investigations, a leading private detective agency specializing in professional investigation services with discretion and expertise. Experienced investigators serving London and UK."
+        keywords="about Lantern Investigations, private detective agency, professional investigators, investigation services London, private investigation company, detective agency UK"
         url="/about"
         structuredData={structuredData}
       />
@@ -101,7 +101,7 @@ const AboutUs = () => {
              About Us
             </h2>
             <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
-                Henderson Thomas Investigations specialises in a wide range of investigative services, delivering clear, reliable results with professionalism and discretion.
+                Lantern Investigations specialises in a wide range of investigative services, delivering clear, reliable results with professionalism and discretion.
             </p>
           </div>
         </div>
@@ -115,13 +115,13 @@ const AboutUs = () => {
             
             <div className="md:w-1/2 text-center">
               <p className="text-gray-700 text-lg  leading-relaxed mb-4">
-                Henderson Thomas Investigations specialises in a wide range of investigative services. Our dedicated team of skilled male and female investigators operates with professionalism and precision, ensuring your case is managed with the utmost care and discretion.
+                Lantern Investigations specialises in a wide range of investigative services. Our dedicated team of skilled male and female investigators operates with professionalism and precision, ensuring your case is managed with the utmost care and discretion.
               </p>
               <p className="text-gray-700 text-lg  leading-relaxed mb-4">
                 We focus on gathering robust and reliable evidence, enabling our clients to uncover the truth and make informed decisions with confidence. Whether your concern involves personal, corporate, or legal matters, our experts bring years of experience, advanced resources, and cutting-edge equipment to thoroughly investigate and resolve your case.
               </p>
               <p className="text-gray-800 text-lg font-semibold mb-6">
-                Whatever the challenge, you can rely on Henderson Thomas Investigations for a comprehensive and effective solution.
+                Whatever the challenge, you can rely on Lantern Investigations for a comprehensive and effective solution.
               </p>
             </div>
 
@@ -129,7 +129,7 @@ const AboutUs = () => {
             <div className="md:w-1/2">
               <img
                 src={image}
-                alt="About Henderson Thomas Investigations"
+                alt="About Lantern Investigations"
                 className="rounded-xl shadow-lg w-full object-cover"
               />
             </div>

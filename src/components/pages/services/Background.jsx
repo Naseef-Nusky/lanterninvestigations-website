@@ -7,20 +7,20 @@ const BackgroundCheck = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Background Check Services",
-    "description": "Professional background check services for employment, finance, and personal matters. Accurate and confidential background verification by Henderson Thomas Investigations.",
+    "description": "Professional background check services for employment, finance, and personal matters. Accurate and confidential background verification by Lantern Investigations.",
     "provider": {
       "@type": "Organization",
-      "name": "Henderson Thomas Investigations",
+      "name": "Lantern Investigations",
       "url": "https://hendersonthomasinvestigations.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1st Floor, 238 Kensington High St",
+        "streetAddress": "51 Lime Street",
         "addressLocality": "London",
-        "postalCode": "W8 6SN",
+        "postalCode": "EC3M 7DQ",
         "addressCountry": "GB"
       },
-      "telephone": "07826 416466",
-      "email": "private@hendersonthomasinvestigations.com"
+      "telephone": "07979 359508",
+      "email": "info@lanterninvestigations.com"
     },
     "serviceType": "Background Check",
     "areaServed": {
@@ -39,8 +39,8 @@ const BackgroundCheck = () => {
   return (
     <section className="bg-gray-50 pt-16 md:pt-20">
       <SEO 
-        title="Background Check Services - Professional Verification | Henderson Thomas Investigations"
-        description="Professional background check services for employment, finance, and personal matters. Accurate and confidential background verification by Henderson Thomas Investigations."
+        title="Background Check Services - Professional Verification | Lantern Investigations"
+        description="Professional background check services for employment, finance, and personal matters. Accurate and confidential background verification by Lantern Investigations."
         keywords="background check services, background verification, employment screening, criminal background check, financial background check, background check London, verification services UK"
         url="/service/background"
         structuredData={structuredData}
@@ -80,7 +80,7 @@ const BackgroundCheck = () => {
             relationships, having accurate and reliable information is crucial.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            At Henderson Thomas Investigations, we understand the importance of
+            At Lantern Investigations, we understand the importance of
             ensuring trust and safety. That’s why we offer professional
             background check services designed to give you peace of mind. We
             provide thorough, confidential investigations into criminal history,
@@ -116,7 +116,7 @@ const BackgroundCheck = () => {
             business deals, or evaluating trust in personal relationships.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            At Henderson Thomas Investigations, we specialise in providing
+            At Lantern Investigations, we specialise in providing
             meticulous background-checking services tailored to your needs. Our
             expert investigators ensure that every detail is verified, helping
             you make informed decisions with confidence and clarity.
@@ -147,7 +147,7 @@ const BackgroundCheck = () => {
             Research consistently shows that thorough background checks
             contribute to reducing risks, building trust, and fostering better
             outcomes in professional, personal, and business contexts. At
-            Henderson Thomas Investigations, we deliver comprehensive, reliable
+            Lantern Investigations, we deliver comprehensive, reliable
             background-checking services to support your needs with accuracy and
             professionalism.
           </p>
@@ -184,10 +184,10 @@ const BackgroundCheck = () => {
         {/* Why Choose Us */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-gray-800">
-            Why Choose Henderson Thomas Investigations?
+            Why Choose Lantern Investigations?
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            At Henderson Thomas Investigations, we take great pride in our
+            At Lantern Investigations, we take great pride in our
             extensive experience and proven expertise in conducting
             comprehensive background checks. Our team is dedicated to
             maintaining the highest standards of professionalism, ethics, and
@@ -198,7 +198,7 @@ const BackgroundCheck = () => {
             tools, we deliver accurate and reliable results tailored to your
             specific needs. Whether you’re a business owner evaluating potential
             hires, a landlord screening tenants, or an individual seeking
-            clarity, Henderson Thomas Investigations is your dependable partner
+            clarity, Lantern Investigations is your dependable partner
             in the realm of background-checking services.
           </p>
         </div>
@@ -209,7 +209,7 @@ const BackgroundCheck = () => {
             Our Process of Conducting Background Checks
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            At Henderson Thomas Investigations, we approach background checks
+            At Lantern Investigations, we approach background checks
             with precision and dedication, delivering tailored solutions that
             address your specific needs. Our process is built on a foundation of
             thoroughness and clarity, ensuring no detail is overlooked and
@@ -225,7 +225,7 @@ const BackgroundCheck = () => {
           <p className="text-gray-700 leading-relaxed">
             What sets us apart is our unwavering commitment to transparency and
             collaboration. We provide regular updates throughout the process,
-            ensuring you’re informed at every stage. At Henderson Thomas
+            ensuring you’re informed at every stage. At Lantern
             Investigations, our goal is to empower you with reliable insights,
             helping you make decisions that inspire trust and security. With us,
             you’re not just getting a service; you’re gaining a partner

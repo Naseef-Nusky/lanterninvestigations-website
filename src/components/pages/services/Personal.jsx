@@ -7,20 +7,20 @@ const PersonalInvestigation = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Personal Investigation Services",
-    "description": "Confidential personal investigation services for sensitive matters including background checks, infidelity investigations, and family matters. Trusted solutions by Henderson Thomas Investigations.",
+    "description": "Confidential personal investigation services for sensitive matters including background checks, infidelity investigations, and family matters. Trusted solutions by Lantern Investigations.",
     "provider": {
       "@type": "Organization",
-      "name": "Henderson Thomas Investigations",
+      "name": "Lantern Investigations",
       "url": "https://hendersonthomasinvestigations.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1st Floor, 238 Kensington High St",
+        "streetAddress": "51 Lime Street",
         "addressLocality": "London",
-        "postalCode": "W8 6SN",
+        "postalCode": "EC3M 7DQ",
         "addressCountry": "GB"
       },
-      "telephone": "07826 416466",
-      "email": "private@hendersonthomasinvestigations.com"
+      "telephone": "07979 359508",
+      "email": "info@lanterninvestigations.com"
     },
     "serviceType": "Personal Investigation",
     "areaServed": {
@@ -39,8 +39,8 @@ const PersonalInvestigation = () => {
   return (
     <section className="bg-gray-50 pt-16 md:pt-20">
       <SEO 
-        title="Personal Investigation Services - Confidential Solutions | Henderson Thomas Investigations"
-        description="Confidential personal investigation services for sensitive matters including background checks, infidelity investigations, and family matters. Trusted solutions by Henderson Thomas Investigations."
+        title="Personal Investigation Services - Confidential Solutions | Lantern Investigations"
+        description="Confidential personal investigation services for sensitive matters including background checks, infidelity investigations, and family matters. Trusted solutions by Lantern Investigations."
         keywords="personal investigation, private investigation, infidelity investigation, background check personal, family investigation, personal detective London, confidential investigation UK"
         url="/service/personal"
         structuredData={structuredData}
@@ -77,18 +77,18 @@ const PersonalInvestigation = () => {
             In a world where information holds immense power, private investigators act as the unseen guardians of our most personal secrets and mysteries. These expert professionals venture into the unknown to uncover the truth, resolve uncertainties, and bring clarity to a wide range of personal and individual matters.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            At <span className="font-semibold">Henderson Thomas Investigations</span>, we recognise the importance of the services we provide. Our mission is to deliver exceptional investigative solutions that are precisely tailored to meet your unique needs.
+            At <span className="font-semibold">Lantern Investigations</span>, we recognise the importance of the services we provide. Our mission is to deliver exceptional investigative solutions that are precisely tailored to meet your unique needs.
           </p>
         </div>
 
         {/* Who We Are */}
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-gray-800">Who Are Henderson Thomas Investigations?</h2>
+          <h2 className="text-2xl font-bold text-gray-800">Who Are Lantern Investigations?</h2>
           <p className="text-gray-700 leading-relaxed">
-            Henderson Thomas Investigations is a leading private detective agency renowned for its exceptional skills and unwavering commitment to our clients. With a team of highly experienced, dedicated, and professional investigators, we conduct global investigations with comprehensive international coverage. Specialising in both private and corporate investigations, we cater to the unique needs of individuals seeking answers, closure, or protection.
+            Lantern Investigations is a leading private detective agency renowned for its exceptional skills and unwavering commitment to our clients. With a team of highly experienced, dedicated, and professional investigators, we conduct global investigations with comprehensive international coverage. Specialising in both private and corporate investigations, we cater to the unique needs of individuals seeking answers, closure, or protection.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            What sets Henderson Thomas Investigations apart from other agencies is our personalised approach, high professional standards, and meticulous attention to detail in each case. Unlike larger firms where clients may feel like just another number, we take the time to understand the specific circumstances and emotions surrounding every investigation. By building strong relationships with our clients, we offer a compassionate yet determined approach to uncovering the truth.
+            What sets Lantern Investigations apart from other agencies is our personalised approach, high professional standards, and meticulous attention to detail in each case. Unlike larger firms where clients may feel like just another number, we take the time to understand the specific circumstances and emotions surrounding every investigation. By building strong relationships with our clients, we offer a compassionate yet determined approach to uncovering the truth.
           </p>
           <p className="text-gray-700 leading-relaxed">
             Additionally, our extensive network of resources, local expertise, and valuable connections distinguishes us from the competition. From forensic specialists to affordable private investigator services, local detectives to legal advisors, we’ve built invaluable partnerships over the years. These alliances give us access to top-tier information and expertise, enhancing our ability to solve even the most sensitive and complex cases with professionalism and integrity.
@@ -99,7 +99,7 @@ const PersonalInvestigation = () => {
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-gray-800">Why Choose Our Private Investigator Services?</h2>
           <p className="text-gray-700 leading-relaxed">
-            At Henderson Thomas Investigations, we set ourselves apart by offering personalised and confidential solutions that prioritise your specific needs. We understand that every case is unique, and we tailor our approach to uncover the truth in the most efficient way possible. With years of experience in a wide range of investigations, from background checks to covert surveillance, our team of skilled investigators has the expertise to handle any case.
+            At Lantern Investigations, we set ourselves apart by offering personalised and confidential solutions that prioritise your specific needs. We understand that every case is unique, and we tailor our approach to uncover the truth in the most efficient way possible. With years of experience in a wide range of investigations, from background checks to covert surveillance, our team of skilled investigators has the expertise to handle any case.
           </p>
           <p className="text-gray-700 leading-relaxed">
             Our commitment to excellence goes beyond just solving cases; it includes providing exceptional customer service. We believe in maintaining open communication and transparency throughout the investigation process, so you are always kept informed about the progress and findings. We value the trust you place in us, which is why confidentiality is paramount. You can be assured that all information shared with us will be treated with the utmost discretion, and all our investigators comply fully with the Data Protection Act.

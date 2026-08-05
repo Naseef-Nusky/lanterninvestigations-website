@@ -65,9 +65,9 @@ const SEO = ({ title, description, keywords, url, structuredData, image, robots 
     if (image) {
       updateMetaTag('og:image', image, true);
     } else {
-      updateMetaTag('og:image', `${window.location.origin}/logo.png`, true);
+      updateMetaTag('og:image', `${window.location.origin}/logo-new.png`, true);
     }
-    updateMetaTag('og:site_name', 'Henderson Thomas Investigations', true);
+    updateMetaTag('og:site_name', 'Lantern Investigations', true);
     updateMetaTag('og:locale', 'en_GB', true);
 
     // Update Twitter Card tags
@@ -84,11 +84,11 @@ const SEO = ({ title, description, keywords, url, structuredData, image, robots 
     if (image) {
       updateMetaTag('twitter:image', image, true);
     } else {
-      updateMetaTag('twitter:image', `${window.location.origin}/logo.png`, true);
+      updateMetaTag('twitter:image', `${window.location.origin}/logo-new.png`, true);
     }
 
     // Update author
-    updateMetaTag('author', 'Henderson Thomas Investigations');
+    updateMetaTag('author', 'Lantern Investigations');
     
     // Update robots (allow override)
     updateMetaTag('robots', robots || 'index, follow');

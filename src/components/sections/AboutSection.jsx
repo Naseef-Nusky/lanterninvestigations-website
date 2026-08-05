@@ -33,7 +33,7 @@ const AboutSection = () => {
             Your Local Private Investigator
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            Henderson Thomas Investigations specialises in both private and corporate investigations. 
+            Lantern Investigations specialises in both private and corporate investigations. 
             Our team operates globally, providing expert support for cases across the UK.
           </p>
         </div>

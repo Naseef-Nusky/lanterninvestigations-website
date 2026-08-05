@@ -46,9 +46,9 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="logo group flex items-center flex-shrink-0">
           <img 
-            src="/logo.png" 
-            alt="Henderson Thomas Investigations Logo" 
-            className="h-8 md:h-10 w-auto transition-all duration-300 group-hover:scale-105"
+            src="/logo-new.png" 
+            alt="Lantern Investigations Logo" 
+            className="h-12 md:h-16 w-auto transition-all duration-300 group-hover:scale-105"
           />
         </Link>
         
@@ -159,11 +159,11 @@ const Header = () => {
         <div className="text-right text-gray-800 hidden xl:block">
           <div className="px-2 py-1">
             <div className="text-xs font-medium text-gray-500 mb-1">Call 100% Confidential</div>
-            <a href="tel:07826416466" className="inline-flex items-center justify-end text-lg font-bold text-gray-900 transition-colors duration-300 hover:text-blue-600">
+            <a href="tel:07979359508" className="inline-flex items-center justify-end text-lg font-bold text-gray-900 transition-colors duration-300 hover:text-blue-600">
               <svg className="w-5 h-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              07826 416466
+              07979 359508
             </a>
             <div className="flex items-center justify-end mt-1">
               <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>

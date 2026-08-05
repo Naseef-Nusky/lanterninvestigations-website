@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { sendContactEnquiry } from '../lib/sendContactEnquiry';
 
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({
@@ -67,47 +67,31 @@ const ContactFormSection = () => {
     setSubmitStatus(null);
     
     try {
-      const EMAILJS_CONFIG = {
-        serviceId: 'service_z9nrpnh',
-        templateId: 'template_o96o6re',
-        publicKey: 'KMtxeuThzMItKsmDc',
-      };
+      await sendContactEnquiry({
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        message: formData.message.trim(),
+        source: 'website',
+      });
 
-      const result = await emailjs.send(
-        EMAILJS_CONFIG.serviceId,
-        EMAILJS_CONFIG.templateId,
-        {
-          title: `New Website Contact from ${formData.name}`,
-          name: formData.name.trim(),
-          email: formData.email.trim(),
-          phone: formData.phone.trim(),
-          message: formData.message.trim(),
-          time: new Date().toLocaleString(),
-        },
-        EMAILJS_CONFIG.publicKey
-      );
-
-      if (result.status === 200) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          message: ''
-        });
-        setTouched({
-          name: false,
-          email: false,
-          phone: false,
-          message: false
-        });
-        setSubmitTried(false);
-      } else {
-        throw new Error('Failed to send');
-      }
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+      setTouched({
+        name: false,
+        email: false,
+        phone: false,
+        message: false
+      });
+      setSubmitTried(false);
     } catch (err) {
       setSubmitStatus('error');
-      console.error('EmailJS Error:', err);
+      console.error('Contact form error:', err);
     } finally {
       setIsSubmitting(false);
     }
@@ -267,10 +251,10 @@ const ContactFormSection = () => {
                     <div className="ml-3 text-left">
                       <p className="text-sm md:text-base text-gray-700 font-medium text-left">Phone</p>
                       <a 
-                        href="tel:07826416466" 
+                        href="tel:07979359508" 
                         className="text-sm md:text-base text-gray-600 hover:text-[#0047b2] transition-colors text-left"
                       >
-                        07826 416466
+                        07979 359508
                       </a>
                     </div>
                   </div>
@@ -284,10 +268,10 @@ const ContactFormSection = () => {
                     <div className="ml-3 text-left">
                       <p className="text-sm md:text-base text-gray-700 font-medium text-left">Email</p>
                       <a 
-                        href="mailto:hendersonthomasinvestigations@outlook.com" 
+                        href="mailto:info@lanterninvestigations.com" 
                         className="text-xs md:text-base text-gray-600 hover:text-[#0047b2] transition-colors text-left whitespace-nowrap"
                       >
-                        hendersonthomasinvestigations@outlook.com
+                        info@lanterninvestigations.com
                       </a>
                     </div>
                   </div>

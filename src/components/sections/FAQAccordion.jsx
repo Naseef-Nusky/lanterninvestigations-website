@@ -6,7 +6,7 @@ const FAQAccordion = () => {
   const faqs = [
     {
       q: 'How Much Does a Private Investigator Cost?',
-      a: "If you're asking, 'How much does a private investigator cost?' the answer depends on the type of investigation required. At Henderson Thomas Investigations, we provide affordable private investigator services tailored to your needs. Whether you need a detective private eye, legal investigator, or corporate private investigator, our pricing is transparent, competitive, and designed to deliver results."
+      a: "If you're asking, 'How much does a private investigator cost?' the answer depends on the type of investigation required. At Lantern Investigations, we provide affordable private investigator services tailored to your needs. Whether you need a detective private eye, legal investigator, or corporate private investigator, our pricing is transparent, competitive, and designed to deliver results."
     },
     {
       q: 'What Types of Investigations Do You Handle?',

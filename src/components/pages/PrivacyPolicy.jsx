@@ -5,17 +5,17 @@ const PrivacyPolicy = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Privacy Policy - Henderson Thomas Investigations",
-    "description": "Privacy policy explaining how Henderson Thomas Investigations protects and manages your personal information. Learn about our data protection and privacy procedures.",
+    "name": "Privacy Policy - Lantern Investigations",
+    "description": "Privacy policy explaining how Lantern Investigations protects and manages your personal information. Learn about our data protection and privacy procedures.",
     "url": "https://hendersonthomasinvestigations.com/privacy-policy",
     "isPartOf": {
       "@type": "WebSite",
-      "name": "Henderson Thomas Investigations",
+      "name": "Lantern Investigations",
       "url": "https://hendersonthomasinvestigations.com"
     },
     "about": {
       "@type": "Organization",
-      "name": "Henderson Thomas Investigations",
+      "name": "Lantern Investigations",
       "url": "https://hendersonthomasinvestigations.com"
     }
   };
@@ -23,9 +23,9 @@ const PrivacyPolicy = () => {
   return (
     <div className="bg-white pt-16 md:pt-20">
       <SEO 
-        title="Privacy Policy - Data Protection | Henderson Thomas Investigations"
-        description="Privacy policy explaining how Henderson Thomas Investigations protects and manages your personal information. Learn about our data protection and privacy procedures."
-        keywords="privacy policy, data protection, personal information, privacy rights, data security, Henderson Thomas Investigations privacy"
+        title="Privacy Policy - Data Protection | Lantern Investigations"
+        description="Privacy policy explaining how Lantern Investigations protects and manages your personal information. Learn about our data protection and privacy procedures."
+        keywords="privacy policy, data protection, personal information, privacy rights, data security, Lantern Investigations privacy"
         url="/privacy-policy"
         structuredData={structuredData}
       />
@@ -48,7 +48,7 @@ const PrivacyPolicy = () => {
                Privacy Policy
             </h2>
             <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
-              Your privacy is important to us. Learn how Henderson Thomas Investigations protects and manages your personal information.
+              Your privacy is important to us. Learn how Lantern Investigations protects and manages your personal information.
             </p>
           </div>
         </div>
@@ -60,7 +60,7 @@ const PrivacyPolicy = () => {
 
         {/* Intro */}
         <p className="text-gray-700 mb-6 leading-relaxed text-sm md:text-base">
-          Henderson Thomas Investigations is committed to ensuring that your
+          Lantern Investigations is committed to ensuring that your
           privacy is protected. This policy explains how we use the information
           we collect about you, how you can instruct us if you prefer to limit
           the use of that information, and the procedures we have in place to
@@ -171,7 +171,7 @@ const PrivacyPolicy = () => {
 
         {/* Section 5 */}
         <h2 className="text-lg font-semibold text-black mb-2">
-          5. How to Contact Henderson Thomas Investigations
+          5. How to Contact Lantern Investigations
         </h2>
         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
           We welcome your views about our website and our Privacy Policy. If you

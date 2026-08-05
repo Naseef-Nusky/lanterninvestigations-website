@@ -58,16 +58,16 @@ const BlogPage = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "Henderson Thomas Investigations Blog",
-    "description": "Stay informed with the latest insights, tips, and updates from Henderson Thomas Investigations. Expert team shares valuable knowledge about private investigation services and industry trends.",
+    "name": "Lantern Investigations Blog",
+    "description": "Stay informed with the latest insights, tips, and updates from Lantern Investigations. Expert team shares valuable knowledge about private investigation services and industry trends.",
     "url": "https://hendersonthomasinvestigations.com/blogs",
     "publisher": {
       "@type": "Organization",
-      "name": "Henderson Thomas Investigations",
+      "name": "Lantern Investigations",
       "url": "https://hendersonthomasinvestigations.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://hendersonthomasinvestigations.com/logo.png"
+        "url": "https://hendersonthomasinvestigations.com/logo-new.png"
       }
     },
     "blogPost": posts.map(post => ({
@@ -78,11 +78,11 @@ const BlogPage = () => {
       "datePublished": post.publishedDate,
       "author": {
         "@type": "Person",
-        "name": post.author || "Henderson Thomas Investigations"
+        "name": post.author || "Lantern Investigations"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Henderson Thomas Investigations"
+        "name": "Lantern Investigations"
       }
     }))
   };
@@ -90,8 +90,8 @@ const BlogPage = () => {
   return (
     <div className="bg-gray-50 pt-16 md:pt-20">
       <SEO 
-        title="Our Blog - Private Investigation Insights & Tips | Henderson Thomas Investigations"
-        description="Stay informed with the latest insights, tips, and updates from Henderson Thomas Investigations. Expert team shares valuable knowledge about private investigation services and industry trends."
+        title="Our Blog - Private Investigation Insights & Tips | Lantern Investigations"
+        description="Stay informed with the latest insights, tips, and updates from Lantern Investigations. Expert team shares valuable knowledge about private investigation services and industry trends."
         keywords="private investigation blog, investigation tips, private detective insights, investigation news, detective agency blog, investigation advice, private investigation trends"
         url="/blogs"
         structuredData={structuredData}
@@ -115,7 +115,7 @@ const BlogPage = () => {
               Our Blog
             </h2>
             <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
-              Stay informed with the latest insights, tips, and updates from Henderson Thomas Investigations. 
+              Stay informed with the latest insights, tips, and updates from Lantern Investigations. 
               Our expert team shares valuable knowledge about private investigation services and industry trends.
             </p>
           </div>

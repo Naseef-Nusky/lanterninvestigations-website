@@ -6,7 +6,7 @@ const NotFound = () => {
   return (
     <main className="min-h-screen flex items-center justify-center bg-gray-50 py-20 px-4">
       <SEO
-        title="404 Not Found | Henderson Thomas Investigations"
+        title="404 Not Found | Lantern Investigations"
         description="The page you’re looking for doesn’t exist."
         url={window.location.pathname}
         robots="noindex, nofollow"

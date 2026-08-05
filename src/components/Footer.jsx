@@ -10,9 +10,9 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2 text-left">
             <div className="mb-4 flex items-center space-x-3">
               <img 
-                src="/logo.png" 
-                alt="Henderson Thomas Investigations Logo" 
-                className="h-10 md:h-12 w-auto"
+                src="/logo-new.png" 
+                alt="Lantern Investigations Logo" 
+                className="h-14 md:h-16 w-auto"
               />
             </div>
              <p className="text-sm md:text-base text-gray-600 mb-4 leading-relaxed text-left">
@@ -23,7 +23,7 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 text-left">
               <div className="flex items-center">
                 <span className="mr-2">📞</span>
-                <span className="text-sm md:text-base font-semibold">07826 416466</span>
+                <span className="text-sm md:text-base font-semibold">07979 359508</span>
               </div>
               <div className="flex items-center">
                  <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
@@ -96,17 +96,17 @@ const Footer = () => {
             <div className="space-y-3 text-sm md:text-base text-gray-700">
               <div>
                 <p className="font-semibold mb-1">📍 Head Office</p>
-                <p>HENDERSON THOMAS INVESTIGATIONS</p>
-                <p>1st Floor, 238 Kensington High St,</p>
-                <p>London W8 6SN</p>
+                <p>Lantern Investigations</p>
+                <p>51 Lime Street,</p>
+                <p>London EC3M 7DQ</p>
               </div>
               <div>
                 <p className="font-semibold mb-1">📧 Email</p>
-                <p>private@hendersonthomasinvestigations.com</p>
+                <p>info@lanterninvestigations.com</p>
               </div>
               <div>
                 <p className="font-semibold mb-1">📞 Phone</p>
-                <p>07826 416466</p>
+                <p>07979 359508</p>
               </div>
             </div>
           </div>
@@ -115,6 +115,12 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-200 mt-6 md:mt-8 pt-6 md:pt-8">
           <div className="text-center space-y-2">
+            <div className="text-gray-500 text-xs md:text-sm leading-relaxed space-y-1">
+              <p>
+                Lantern Investigations is the trading name of West Green Consultancy Limited. Registered in England and Wales
+              </p>
+              <p>Company Number 16300477.</p>
+            </div>
             <div className="text-gray-500 text-xs md:text-sm">© Copyright {new Date().getFullYear()} | All Rights Reserved</div>
             <div className="flex flex-wrap justify-center items-center space-x-2 md:space-x-3 text-xs md:text-sm">
               <Link to="/contact" className="text-gray-500 hover:text-blue-600 transition-colors duration-300">Contact</Link>

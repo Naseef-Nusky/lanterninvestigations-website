@@ -8,7 +8,7 @@ const generateLocationContent = (location, area) => ({
   slug: area,
   intro: `When complex situations demand reliable answers, our experienced private investigators are here to help. We regularly assist clients throughout ${location}, delivering clear, evidence-based insights so you can move forward with confidence.`,
   services: `Every case is handled with a tailored plan focused on dependable results. Whether you’re a company managing sensitive issues or an individual seeking clarity, we provide a confidential, efficient and discreet service.`,
-  consultation: `For a free, no‑obligation consultation, call 07826 416466 or send an enquiry via our contact form.`,
+  consultation: `For a free, no‑obligation consultation, call 07979 359508 or send an enquiry via our contact form.`,
   headerImage: "/heronew.jpg",
   privateClientTitle: `${location} Investigators for Private Clients`,
   privateClientContent: `When personal issues create uncertainty, clear information helps you regain control and make informed decisions. Our private investigators in ${location} work to uncover the facts you need. Using proven methods, we gather accurate evidence to provide reassurance and help you take the next step with confidence. Every case is handled with care, discretion and professionalism, with our approach shaped around your specific goals.`,
@@ -241,8 +241,8 @@ const Location = () => {
     return (
       <div className="bg-gray-50 pt-0 min-h-screen">
         <SEO 
-          title={`Private Detectives in ${regionData_obj.title} | Henderson Thomas Investigations`}
-          description={`Professional private investigation services across ${regionData_obj.title}. Henderson Thomas Investigations provides confidential, discreet investigative services.`}
+          title={`Private Detectives in ${regionData_obj.title} | Lantern Investigations`}
+          description={`Professional private investigation services across ${regionData_obj.title}. Lantern Investigations provides confidential, discreet investigative services.`}
           keywords={`private detectives ${regionData_obj.title}, ${regionData_obj.title} investigators, private investigation ${regionData_obj.title}`}
           url={`/location/${locationName}`}
         />
@@ -272,13 +272,13 @@ const Location = () => {
             {/* Introduction */}
             <div className="space-y-4">
               <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-                When difficult circumstances demand clarity, professional investigation can make all the difference. Henderson Thomas Investigations supports clients across {regionData_obj.title}, delivering the evidence and insight required to resolve sensitive matters with confidence.
+                When difficult circumstances demand clarity, professional investigation can make all the difference. Lantern Investigations supports clients across {regionData_obj.title}, delivering the evidence and insight required to resolve sensitive matters with confidence.
               </p>
               <p className="text-gray-700 leading-relaxed text-base md:text-lg">
                 Every investigation is designed around your specific objectives, ensuring accurate, actionable intelligence. From complex corporate issues to delicate personal concerns, we provide a confidential and results-driven service you can trust.
               </p>
               <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-                For a free, no-obligation consultation, please call <strong>07826 416466</strong> or complete our secure online enquiry form.
+                For a free, no-obligation consultation, please call <strong>07979 359508</strong> or complete our secure online enquiry form.
               </p>
             </div>
 
@@ -289,7 +289,7 @@ const Location = () => {
                 Our Services
               </h2>
               <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-6">
-                Henderson Thomas Investigations offers a comprehensive range of professional investigative services designed to meet your specific needs. Explore our specialized services below:
+                Lantern Investigations offers a comprehensive range of professional investigative services designed to meet your specific needs. Explore our specialized services below:
               </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-700 text-sm md:text-lg">
                 <li className="flex items-center">
@@ -447,20 +447,20 @@ const Location = () => {
       "@context": "https://schema.org",
       "@type": "Service",
       "name": `Private Detectives ${locationData.location}`,
-      "description": `Professional private investigation services in ${locationData.location}. Henderson Thomas Investigations provides confidential, discreet investigative services.`,
+      "description": `Professional private investigation services in ${locationData.location}. Lantern Investigations provides confidential, discreet investigative services.`,
       "provider": {
         "@type": "Organization",
-        "name": "Henderson Thomas Investigations",
+        "name": "Lantern Investigations",
         "url": "https://hendersonthomasinvestigations.com",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "1st Floor, 238 Kensington High St",
+          "streetAddress": "51 Lime Street",
           "addressLocality": "London",
-          "postalCode": "W8 6SN",
+          "postalCode": "EC3M 7DQ",
           "addressCountry": "GB"
         },
-        "telephone": "07826 416466",
-        "email": "private@hendersonthomasinvestigations.com"
+        "telephone": "07979 359508",
+        "email": "info@lanterninvestigations.com"
       },
       "serviceType": "Private Investigation",
       "areaServed": {
@@ -472,9 +472,9 @@ const Location = () => {
     return (
       <div className="bg-gray-50 pt-0">
         <SEO 
-          title={`Private Detectives ${locationData.location} - Professional Investigation Services | Henderson Thomas`}
-          description={`Professional private investigation services in ${locationData.location}. Henderson Thomas Investigations provides confidential, discreet investigative services for private and corporate clients.`}
-          keywords={`private detectives ${locationData.location}, ${locationData.location} investigators, private investigation ${locationData.location}, Henderson Thomas ${locationData.location}`}
+          title={`Private Detectives ${locationData.location} - Professional Investigation Services | Lantern`}
+          description={`Professional private investigation services in ${locationData.location}. Lantern Investigations provides confidential, discreet investigative services for private and corporate clients.`}
+          keywords={`private detectives ${locationData.location}, ${locationData.location} investigators, private investigation ${locationData.location}, Lantern ${locationData.location}`}
           url={`/location/${locationData.slug}`}
           structuredData={structuredData}
         />
@@ -520,7 +520,7 @@ const Location = () => {
               Our Services
             </h2>
             <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-6">
-              Henderson Thomas Investigations offers a comprehensive range of professional investigative services designed to meet your specific needs. Explore our specialized services below:
+              Lantern Investigations offers a comprehensive range of professional investigative services designed to meet your specific needs. Explore our specialized services below:
             </p>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-700 text-lg">
               <li className="flex items-center">

@@ -6,20 +6,20 @@ const FraudInvestigation = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Fraud Investigation Services",
-    "description": "Professional fraud investigation services to protect against deception and financial wrongdoing. Expert fraud investigators by Henderson Thomas Investigations.",
+    "description": "Professional fraud investigation services to protect against deception and financial wrongdoing. Expert fraud investigators by Lantern Investigations.",
     "provider": {
       "@type": "Organization",
-      "name": "Henderson Thomas Investigations",
+      "name": "Lantern Investigations",
       "url": "https://hendersonthomasinvestigations.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1st Floor, 238 Kensington High St",
+        "streetAddress": "51 Lime Street",
         "addressLocality": "London",
-        "postalCode": "W8 6SN",
+        "postalCode": "EC3M 7DQ",
         "addressCountry": "GB"
       },
-      "telephone": "07826 416466",
-      "email": "private@hendersonthomasinvestigations.com"
+      "telephone": "07979 359508",
+      "email": "info@lanterninvestigations.com"
     },
     "serviceType": "Fraud Investigation",
     "areaServed": {
@@ -38,8 +38,8 @@ const FraudInvestigation = () => {
   return (
     <section className="bg-gray-50 pt-16 md:pt-20">
       <SEO 
-        title="Fraud Investigation Services - Protect Against Deception | Henderson Thomas Investigations"
-        description="Professional fraud investigation services to protect against deception and financial wrongdoing. Expert fraud investigators by Henderson Thomas Investigations."
+        title="Fraud Investigation Services - Protect Against Deception | Lantern Investigations"
+        description="Professional fraud investigation services to protect against deception and financial wrongdoing. Expert fraud investigators by Lantern Investigations."
         keywords="fraud investigation, fraud detection, scam investigation, financial fraud, identity theft investigation, fraud investigator London, fraud services UK"
         url="/service/fraud"
         structuredData={structuredData}
@@ -81,7 +81,7 @@ const FraudInvestigation = () => {
           </p>
           <p className="text-gray-700 leading-relaxed">
             As fraud becomes more complex, having the right expertise is key to
-            handling it effectively. At Henderson Thomas Investigations, our
+            handling it effectively. At Lantern Investigations, our
             team of experienced fraud investigators is here to help. We use our
             skills and knowledge to uncover fraudulent activities, ensuring that
             we handle every case with care and accuracy. Let us assist you in
@@ -114,10 +114,10 @@ const FraudInvestigation = () => {
         {/* Why Choose Us */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-gray-800">
-            Why Choose Henderson Thomas Investigations?
+            Why Choose Lantern Investigations?
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            At Henderson Thomas Investigations, we bring years of experience and
+            At Lantern Investigations, we bring years of experience and
             expertise to fraud and criminal investigations. Our team consists of
             certified professionals who have successfully handled cases across a
             wide range of industries. We utilise the latest technology and

@@ -10,17 +10,17 @@ const Services = () => {
     "description": "Professional investigation services including covert surveillance, fraud investigation, missing persons, personal investigations, and background checks.",
     "provider": {
       "@type": "Organization",
-      "name": "Henderson Thomas Investigations",
+      "name": "Lantern Investigations",
       "url": "https://hendersonthomasinvestigations.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1st Floor, 238 Kensington High St",
+        "streetAddress": "51 Lime Street",
         "addressLocality": "London",
-        "postalCode": "W8 6SN",
+        "postalCode": "EC3M 7DQ",
         "addressCountry": "GB"
       },
-      "telephone": "07826 416466",
-      "email": "private@hendersonthomasinvestigations.com"
+      "telephone": "07979 359508",
+      "email": "info@lanterninvestigations.com"
     },
     "serviceType": "Private Investigation",
     "areaServed": {
@@ -59,7 +59,7 @@ const Services = () => {
   return (
     <section className="bg-gray-50 pt-16 md:pt-20">
       <SEO 
-        title="Our Services - Professional Private Investigation Services | Henderson Thomas Investigations"
+        title="Our Services - Professional Private Investigation Services | Lantern Investigations"
         description="Professional private investigation services including covert surveillance, fraud investigation, missing persons, personal investigations, and background checks. Expert investigators serving London and UK."
         keywords="private investigation services, covert surveillance, fraud investigation, missing persons, personal investigation, background checks, private detective London, investigation services UK"
         url="/our-services"

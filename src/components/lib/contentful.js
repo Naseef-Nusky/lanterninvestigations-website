@@ -99,7 +99,7 @@ export const formatBlogPost = (post) => {
     excerpt: post.fields.excerpt, // Keep as rich text object
     content: post.fields.content, // Keep as rich text object
     featuredImage: post.fields.featuredImage?.fields?.file?.url,
-    author: post.fields.author || 'Henderson Thomas Investigations',
+    author: post.fields.author || 'Lantern Investigations',
     publishedDate: post.fields.publishedDate || post.sys.createdAt,
     updatedDate: post.sys.updatedAt,
   };

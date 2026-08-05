@@ -5,7 +5,6 @@
   "dependencies": {
     "@contentful/rich-text-plain-text-renderer": "^17.1.5",
     "@contentful/rich-text-react-renderer": "^16.1.5",
-    "@emailjs/browser": "^4.4.1",
     "contentful": "^11.8.7",
     "lucide-react": "^0.548.0",
     "react": "^19.2.0",

@@ -81,15 +81,15 @@ function App() {
               <div className="text-center">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Need Private Investigation Services?</h2>
                 <p className="text-gray-600 mb-6">
-                  Get in touch with Henderson Thomas Investigations for professional, confidential investigation services.
+                  Get in touch with Lantern Investigations for professional, confidential investigation services.
                 </p>
                 
                 <div className="space-y-4">
                   <a
-                    href="tel:07826416466"
+                    href="tel:07979359508"
                     className="block w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                   >
-                    📞 Call: 07826 416466
+                    📞 Call: 07979 359508
                   </a>
                   <Link
                     to="/contact"
