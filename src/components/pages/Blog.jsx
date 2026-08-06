@@ -124,7 +124,7 @@ const BlogPage = () => {
 
       {/* Blog Content */}
       <div className="pb-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-8">
 
         {/* Blog Posts Grid */}
         {posts.length === 0 ? (
@@ -133,43 +133,51 @@ const BlogPage = () => {
             <p className="text-gray-500">Check back soon for our latest insights and updates.</p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {posts.map((post) => (
               <Link
                 key={post.id}
                 to={`/blogs/${post.slug}`}
-                className="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col cursor-pointer"
+                className="group flex flex-col cursor-pointer bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md hover:border-blue-100 transition-all duration-300"
               >
                 {/* Featured Image */}
-                {post.featuredImage && (
-                  <div className="aspect-w-16 aspect-h-9">
+                <div className="relative overflow-hidden bg-gray-100 aspect-[16/10]">
+                  {post.featuredImage ? (
                     <img
                       src={getImageUrl({ fields: { file: { url: post.featuredImage } } })}
                       alt={post.title}
-                      className="w-full h-64 object-cover"
+                      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                     />
-                  </div>
-                )}
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-gray-100 to-blue-50" />
+                  )}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                </div>
 
                 {/* Content */}
-                <div className="p-6 flex flex-col h-full">
-                  {/* Title */}
-                  <h2 className="text-xl font-bold text-gray-900 mb-3 hover:text-[#0047b2] transition-colors">
+                <div className="flex flex-col flex-1 text-left p-5 md:p-6">
+                  {post.publishedDate && (
+                    <time className="text-xs font-semibold tracking-widest uppercase text-[#0047b2] mb-2">
+                      {new Date(post.publishedDate).toLocaleDateString('en-GB', {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric',
+                      })}
+                    </time>
+                  )}
+
+                  <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-snug group-hover:text-[#0047b2] transition-colors duration-300">
                     {post.title}
                   </h2>
 
-                  {/* Excerpt */}
-                  <p className="text-gray-600 mb-4 line-clamp-3 flex-grow">
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5 line-clamp-3 flex-grow">
                     {post.excerpt ? documentToPlainTextString(post.excerpt) : 'No excerpt available'}
                   </p>
 
-                  {/* Read More Link - Bottom Right */}
-                  <div className="flex justify-end mt-auto">
-                    <span className="inline-flex items-center text-[#0047b2] font-semibold hover:text-blue-700 transition-colors">
-                      Read More
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </span>
-                  </div>
+                  <span className="inline-flex items-center text-[#0047b2] font-semibold text-sm tracking-wide mt-auto">
+                    Read article
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
                 </div>
               </Link>
             ))}
