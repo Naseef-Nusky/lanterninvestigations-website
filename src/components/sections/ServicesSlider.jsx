@@ -7,41 +7,49 @@ const ServicesSlider = () => {
       id: 1,
       title: 'Covert Surveillance',
       desc:
-        'Our expert private investigators carry out discreet surveillance to capture photo and video evidence you can rely on. Whether it\'s for legal, personal, or corporate matters, we provide clear, professional results with complete confidentiality.',
+        'Our experienced surveillance operatives conduct discreet observations using professional equipment to obtain high-quality photographic and video evidence. Ideal for: Infidelity Investigations, Employee Misconduct, Insurance Fraud, Child Custody Matters, and Civil Litigation.',
       img: '/covert.jpg',
-      link: '/service/covert'
+      link: '/service/covert',
     },
     {
       id: 2,
-      title: 'Missing Person Investigation',
+      title: 'Background Checks',
       desc:
-        'Every 90 seconds someone goes missing in the UK. Our team uses advanced tracing methods, intelligence databases, and global contacts to locate individuals quickly and effectively — giving you answers and peace of mind.',
-      img: '/missing.jpg',
-      link: '/service/missing'
+        'Protect yourself before making important decisions. We carry out comprehensive background investigations on individuals and companies. Checks include: Identity Verification, Financial Intelligence, Employment History, Company Searches, Reputation Reports, and Social Media Intelligence.',
+      img: '/background.jpg',
+      link: '/service/background',
     },
     {
       id: 3,
-      title: 'Fraud Investigation',
+      title: 'Fraud Investigations',
       desc:
-        'Fraud costs UK victims billions each year. We specialise in exposing scams, financial deception, and identity theft, gathering evidence you can act on. Protect yourself with fast, discreet support from our experienced fraud investigators.',
+        'Fraud can affect both businesses and private individuals. Our investigators specialise in uncovering fraudulent activity through intelligence gathering, surveillance and evidence collection. We investigate: Insurance Fraud, Employee Theft, Financial Fraud, Romance Scams, Investment Fraud, and Identity Fraud.',
       img: '/fraud.jpg',
-      link: '/service/fraud'
+      link: '/service/fraud',
     },
     {
       id: 4,
-      title: 'Personal Investigations',
+      title: 'Missing Person Investigations',
       desc:
-        'From background checks and online dating enquiries to infidelity and family matters, our detectives handle sensitive cases with care and discretion. We uncover the truth so you can make informed decisions with confidence.',
-      img: '/personal.jpg',
-      link: '/service/personal'
+        'When someone disappears or contact has been lost, time matters. Using specialist tracing databases, intelligence sources and investigative techniques, we help locate missing family members, debtors, witnesses and long-lost relatives both within the UK and internationally.',
+      img: '/missing.jpg',
+      link: '/service/missing',
     },
     {
       id: 5,
-      title: 'Background Checking Services',
+      title: 'Personal Investigations',
       desc:
-        'We provide thorough background checks for employment, finance, and personal matters. With discreet and accurate verification, our investigators deliver the facts you need to protect your interests and make smart choices.',
-      img: '/background.jpg',
-      link: '/service/background'
+        'Sensitive matters require experienced investigators. Whether you’re concerned about a relationship, suspicious behaviour or simply need answers, we provide confidential investigations with complete professionalism. Services include: Relationship Investigations, Matrimonial Enquiries, Address Tracing, Online Dating Verification, Lifestyle Investigations, and Neighbour Disputes.',
+      img: '/personal.jpg',
+      link: '/service/personal',
+    },
+    {
+      id: 6,
+      title: 'Corporate Investigations',
+      desc:
+        'Protect your business from financial loss and reputational damage. Our corporate investigation team assists businesses of all sizes with confidential intelligence gathering. Services include: Employee Investigations, Internal Theft, Due Diligence, Corporate Surveillance, Intellectual Property Theft, and Competitor Intelligence.',
+      img: '/professional.jpg',
+      link: '/our-services',
     },
   ];
 
@@ -119,10 +127,10 @@ const ServicesSlider = () => {
     <section className="py-16 bg-gray-50">
       <div className="w-full">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 text-center px-4">
-          Our Professional Services
+          Professional Investigation Services
         </h2>
         <p className="text-gray-600 mb-12 max-w-4xl mx-auto text-center px-4">
-          Confidential, professional, and tailored investigation services delivering clear, reliable results.
+          Discreet, results-driven investigation services for individuals, businesses and legal professionals.
         </p>
 
         <div className="relative container mx-auto px-4">

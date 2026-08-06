@@ -1,156 +1,516 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { CheckCircle2, MessageSquare, ClipboardList, Search, FileCheck } from 'lucide-react';
 import SEO from '../../SEO';
 
-const PersonalInvestigation = () => {
+const Personal = () => {
+  const [openFaq, setOpenFaq] = useState(0);
+
+  const relationshipItems = [
+    'Suspected infidelity',
+    'Secret relationships',
+    'Double lives',
+    'Suspicious behaviour',
+    'Unexplained absences',
+    'Lifestyle verification',
+  ];
+
+  const onlineDatingVerify = [
+    'Identity',
+    'Employment',
+    'Relationship status',
+    'Business interests',
+    'Lifestyle claims',
+  ];
+
+  const familyItems = [
+    'Family disputes',
+    'Child welfare concerns',
+    'Missing family members',
+    'Family tracing',
+    'Welfare enquiries',
+    'Family-related investigations',
+  ];
+
+  const tracingItems = [
+    'Family tracing',
+    'Former partner tracing',
+    'Friend tracing',
+    'Debtor tracing',
+    'Witness tracing',
+    'Beneficiary tracing',
+  ];
+
+  const whyChoose = [
+    'Over 25 Years of Investigative Experience',
+    'Experienced UK Private Investigators',
+    'Nationwide Coverage',
+    'International Investigation Capability',
+    'Bespoke Investigation Strategies',
+    'Professional Surveillance Teams',
+    'Detailed Investigation Reports',
+    'Fast Response Times',
+    'Complete Confidentiality',
+    'Outstanding Client Service',
+  ];
+
+  const process = [
+    {
+      number: '01',
+      title: 'Confidential Consultation',
+      description:
+        'Every investigation begins with a confidential discussion to understand your circumstances and objectives.',
+      icon: MessageSquare,
+    },
+    {
+      number: '02',
+      title: 'Investigation Planning',
+      description: 'A bespoke investigation strategy is prepared specifically for your enquiry.',
+      icon: ClipboardList,
+    },
+    {
+      number: '03',
+      title: 'Investigation',
+      description:
+        'Our experienced investigators carry out discreet enquiries using professional investigative techniques to establish the facts.',
+      icon: Search,
+    },
+    {
+      number: '04',
+      title: 'Comprehensive Investigation Report',
+      description:
+        'Following completion of the investigation, you will receive a professional report detailing our findings together with supporting evidence where appropriate.',
+      icon: FileCheck,
+    },
+  ];
+
+  const faqs = [
+    {
+      q: 'Are personal investigations confidential?',
+      a: 'Absolutely. Every enquiry is handled with complete discretion and strict confidentiality.',
+    },
+    {
+      q: 'Can you investigate suspected infidelity?',
+      a: 'Yes. Our experienced investigators regularly assist clients with relationship investigations, covert surveillance and evidence gathering where there is a legitimate reason to do so.',
+    },
+    {
+      q: 'Do you investigate online dating scams?',
+      a: 'Yes. We investigate romance scams, false identities and individuals suspected of dishonest behaviour within online relationships.',
+    },
+    {
+      q: 'Do you provide personal investigation services throughout the UK?',
+      a: 'Yes. Lantern Investigations provides professional personal investigation services throughout England, Scotland, Wales and Northern Ireland, together with international investigations where required.',
+    },
+  ];
+
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Personal Investigation Services",
-    "description": "Confidential personal investigation services for sensitive matters including background checks, infidelity investigations, and family matters. Trusted solutions by Lantern Investigations.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Lantern Investigations",
-      "url": "https://hendersonthomasinvestigations.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "51 Lime Street",
-        "addressLocality": "London",
-        "postalCode": "EC3M 7DQ",
-        "addressCountry": "GB"
-      },
-      "telephone": "07979 359508",
-      "email": "info@lanterninvestigations.com"
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Personal Investigation Services',
+    description:
+      'Professional personal investigation services by experienced private investigators. Discreet relationship, infidelity, background and tracing investigations across the UK.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Lantern Investigations',
+      url: 'https://www.lanterninvestigations.com',
+      telephone: '07979 359508',
+      email: 'info@lanterninvestigations.com',
     },
-    "serviceType": "Personal Investigation",
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    },
-    "offers": {
-      "@type": "Offer",
-      "name": "Personal Investigation Services",
-      "description": "Confidential personal investigation services including background checks, online dating enquiries, infidelity investigations, and family matters",
-      "price": "Contact for quote",
-      "availability": "InStock"
-    }
+    serviceType: 'Personal Investigation',
+    areaServed: { '@type': 'Country', name: 'United Kingdom' },
   };
 
   return (
     <section className="bg-gray-50 pt-16 md:pt-20">
-      <SEO 
-        title="Personal Investigation Services - Confidential Solutions | Lantern Investigations"
-        description="Confidential personal investigation services for sensitive matters including background checks, infidelity investigations, and family matters. Trusted solutions by Lantern Investigations."
-        keywords="personal investigation, private investigation, infidelity investigation, background check personal, family investigation, personal detective London, confidential investigation UK"
+      <SEO
+        title="Personal Investigation Services UK | Lantern Investigations"
+        description="Professional personal investigation services by experienced private investigators. Discreet relationship, infidelity, family and tracing investigations across the UK."
+        keywords="personal investigation UK, relationship investigation, infidelity investigation, private investigator, people tracing, covert surveillance personal"
         url="/service/personal"
         structuredData={structuredData}
       />
-      {/* Hero Section with Background Image */}
+
+      {/* Hero */}
       <div
         className="relative w-full h-96 md:h-[500px] flex items-center justify-center text-center"
         style={{
           backgroundImage: `url('/personal.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-        {/* Hero Text */}
-        <div className="relative z-10 px-6">
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 px-6 max-w-4xl">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
             Personal Investigation Services
           </h1>
-          <p className="text-lg md:text-2xl text-[#ffd700] font-semibold">
-            100% Confidential & Trusted Solutions
+          <p className="text-lg md:text-2xl text-blue-100 font-semibold mb-3">
+            Professional Personal Investigation Services by Experienced Private Investigators
+          </p>
+          <p className="text-base md:text-xl text-white/90">
+            Discreet, Confidential & Professional Private Investigators Across the UK
           </p>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 py-12 space-y-10 text-left md:text-justify">
-        {/* Intro */}
-        <div className="space-y-4">
-          <p className="text-gray-700 leading-relaxed">
-            In a world where information holds immense power, private investigators act as the unseen guardians of our most personal secrets and mysteries. These expert professionals venture into the unknown to uncover the truth, resolve uncertainties, and bring clarity to a wide range of personal and individual matters.
+      {/* Intro */}
+      <div className="bg-white py-14">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl space-y-4 text-left">
+          <p className="text-gray-700 text-lg leading-relaxed">
+            At Lantern Investigations, we understand that personal matters often require sensitivity, discretion and complete confidentiality.
           </p>
-          <p className="text-gray-700 leading-relaxed">
-            At <span className="font-semibold">Lantern Investigations</span>, we recognise the importance of the services we provide. Our mission is to deliver exceptional investigative solutions that are precisely tailored to meet your unique needs.
+          <p className="text-gray-700 text-lg leading-relaxed">
+            With over 25 years of investigative experience, our highly experienced private investigators provide professional personal investigation services for individuals throughout the United Kingdom and internationally.
           </p>
-        </div>
-
-        {/* Who We Are */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-gray-800">Who Are Lantern Investigations?</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Lantern Investigations is a leading private detective agency renowned for its exceptional skills and unwavering commitment to our clients. With a team of highly experienced, dedicated, and professional investigators, we conduct global investigations with comprehensive international coverage. Specialising in both private and corporate investigations, we cater to the unique needs of individuals seeking answers, closure, or protection.
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Whether you have concerns about a relationship, need answers regarding a family matter, wish to verify information, or require professional evidence, our investigators deliver a discreet and tailored service designed to establish the facts.
           </p>
-          <p className="text-gray-700 leading-relaxed">
-            What sets Lantern Investigations apart from other agencies is our personalised approach, high professional standards, and meticulous attention to detail in each case. Unlike larger firms where clients may feel like just another number, we take the time to understand the specific circumstances and emotions surrounding every investigation. By building strong relationships with our clients, we offer a compassionate yet determined approach to uncovering the truth.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            Additionally, our extensive network of resources, local expertise, and valuable connections distinguishes us from the competition. From forensic specialists to affordable private investigator services, local detectives to legal advisors, we’ve built invaluable partnerships over the years. These alliances give us access to top-tier information and expertise, enhancing our ability to solve even the most sensitive and complex cases with professionalism and integrity.
+          <p className="text-gray-800 text-lg font-semibold leading-relaxed">
+            Every investigation is conducted with professionalism, integrity and complete confidentiality, ensuring you receive reliable information that allows you to make informed decisions with confidence.
           </p>
         </div>
+      </div>
 
-        {/* Why Choose Us */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-gray-800">Why Choose Our Private Investigator Services?</h2>
-          <p className="text-gray-700 leading-relaxed">
-            At Lantern Investigations, we set ourselves apart by offering personalised and confidential solutions that prioritise your specific needs. We understand that every case is unique, and we tailor our approach to uncover the truth in the most efficient way possible. With years of experience in a wide range of investigations, from background checks to covert surveillance, our team of skilled investigators has the expertise to handle any case.
+      {/* Professional Personal Investigation Services */}
+      <div className="py-14 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl space-y-4 text-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+            Professional Personal Investigation Services
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Every personal investigation is different.
           </p>
-          <p className="text-gray-700 leading-relaxed">
-            Our commitment to excellence goes beyond just solving cases; it includes providing exceptional customer service. We believe in maintaining open communication and transparency throughout the investigation process, so you are always kept informed about the progress and findings. We value the trust you place in us, which is why confidentiality is paramount. You can be assured that all information shared with us will be treated with the utmost discretion, and all our investigators comply fully with the Data Protection Act.
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our experienced investigators take time to understand your circumstances before developing a bespoke investigation strategy tailored specifically to your objectives.
           </p>
-          <p className="text-gray-700 leading-relaxed">
-            In addition to our expertise and dedication, we utilise advanced technology and specialised tools to ensure our investigations are thorough and successful. With the increasing complexity of methods used by those attempting to hide the truth, we stay ahead of the curve. From state-of-the-art surveillance equipment to cutting-edge forensic analysis techniques, we have the latest resources at our disposal to ensure the best outcomes.
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Whether your enquiry requires covert surveillance, relationship investigations, background enquiries or people tracing, our team is committed to obtaining the answers you need professionally and discreetly.
           </p>
-          <p className="text-gray-700 leading-relaxed font-semibold">
-            Choosing our private investigator services means choosing a team committed not only to uncovering the truth but doing so with efficiency and respect for your privacy. Don’t settle for anything less when it comes to obtaining reliable information—trust us with your most sensitive matters today.
+          <p className="text-gray-900 font-semibold text-lg">Our objective is simple:</p>
+          <p className="text-gray-800 text-lg font-semibold leading-relaxed">
+            To establish the facts while protecting your privacy throughout every stage of the investigation.
           </p>
         </div>
+      </div>
 
-        {/* Our Process */}
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-gray-800">Our Process</h2>
+      {/* Our Personal Investigation Services intro */}
+      <div className="pt-14 pb-6 bg-white">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl text-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+            Our Personal Investigation Services
+          </h2>
+        </div>
+      </div>
 
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-gray-800">Initial Consultation</h3>
-            <p className="text-gray-700 leading-relaxed">
-              A successful investigation always begins with a comprehensive consultation. We take the time to listen and understand your specific situation, goals, and any concerns you may have. This confidential discussion allows us to establish a clear understanding of your needs and expectations, ensuring that we create a bespoke plan of action. By personalising our approach from the very start, we ensure that every step of the investigation is aligned with your objectives, giving you the best chance of achieving the desired outcome.
-            </p>
+      {/* Relationship Investigations */}
+      <div className="py-10 bg-white">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl text-left">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+            Relationship Investigations
+          </h3>
+          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+            Relationship concerns can be emotionally challenging, particularly when trust has broken down.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            Our investigators provide discreet investigations designed to establish the facts, allowing you to make important decisions based on evidence rather than uncertainty.
+          </p>
+          <p className="text-gray-900 font-semibold mb-4">We regularly investigate:</p>
+          <div className="grid sm:grid-cols-2 gap-3 mb-6">
+            {relationshipItems.map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-3 bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl px-4 py-3 border border-gray-100"
+              >
+                <CheckCircle2 className="w-5 h-5 text-[#0047b2] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-800 text-sm md:text-base">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-800 text-lg font-semibold leading-relaxed">
+            Every investigation is handled with complete discretion and professionalism.
+          </p>
+        </div>
+      </div>
 
-            <h3 className="text-xl font-semibold text-gray-800">Investigation Phase</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Once we’ve established the goals and scope of your case, our dedicated investigators spring into action. Combining time-tested investigative techniques with the latest technological tools, we gather evidence, conduct thorough interviews, and follow every lead with precision. Our team is proficient in a wide range of methods, including surveillance, digital forensics, and adherence to legal protocols, allowing us to approach your case from every angle. We ensure that each step is taken carefully and strategically, providing you with the most comprehensive and accurate results.
-            </p>
+      {/* Infidelity Investigations */}
+      <div className="py-10 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl space-y-4 text-left">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900">Infidelity Investigations</h3>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            If you believe your partner may be unfaithful, obtaining factual evidence can provide clarity during a difficult time.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our experienced surveillance investigators conduct discreet investigations designed to establish the truth while maintaining complete confidentiality.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Where appropriate, clients receive detailed reports together with photographic or video evidence obtained during the investigation.
+          </p>
+        </div>
+      </div>
 
-            <h3 className="text-xl font-semibold text-gray-800">Reporting & Documentation</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Transparency and accountability are at the heart of our approach. Throughout the investigation, we maintain detailed records and document all findings thoroughly. Our reports are not only clear and concise but also prepared to be admissible in legal proceedings, should the need arise. We ensure you are kept informed throughout the process, providing you with updates at every stage, so you always know exactly where your case stands.
-            </p>
-
-            <h3 className="text-xl font-semibold text-gray-800">Client Communication</h3>
-            <p className="text-gray-700 leading-relaxed">
-              We understand that clear communication is crucial for a successful partnership. Our team makes it a priority to keep you informed with regular updates on the status of your case. If you have any questions or concerns, we’re always available to provide answers and offer guidance. Your peace of mind is our focus, and we strive to ensure you feel supported and confident at every step of the investigation.
-            </p>
+      {/* Online Dating Investigations */}
+      <div className="py-10 bg-white">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl text-left">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+            Online Dating Investigations
+          </h3>
+          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+            Meeting people online has become increasingly common, but unfortunately so have romance scams and false identities.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            If you have concerns about someone you have met online, our investigators can verify important information before emotional or financial commitments are made.
+          </p>
+          <p className="text-gray-900 font-semibold mb-4">Our investigations may include verifying:</p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {onlineDatingVerify.map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-3 bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl px-4 py-3 border border-gray-100"
+              >
+                <CheckCircle2 className="w-5 h-5 text-[#0047b2] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-800 text-sm md:text-base">{item}</span>
+              </div>
+            ))}
           </div>
         </div>
+      </div>
 
-        {/* Call to Action */}
-        <div className="mt-12 text-center">
-<Link
-  to="/contact"
-  className="inline-block px-6 py-3 bg-[#0047b2] text-white rounded-lg shadow-md hover:bg-[#003080] transition-colors font-semibold"
->
-  Contact Us Today
-</Link>
+      {/* Background Checks */}
+      <div className="py-10 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl space-y-4 text-left">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900">Background Checks</h3>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Before placing your trust in someone, it is often sensible to verify the information you have been given.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our professional background investigation services help clients confirm important details before entering relationships, making financial commitments or entering business arrangements.
+          </p>
+        </div>
+      </div>
+
+      {/* Family Investigations */}
+      <div className="py-10 bg-white">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl text-left">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">Family Investigations</h3>
+          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+            Family matters often require experienced investigators who understand the importance of professionalism and discretion.
+          </p>
+          <p className="text-gray-900 font-semibold mb-4">We regularly assist with:</p>
+          <div className="grid sm:grid-cols-2 gap-3 mb-6">
+            {familyItems.map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-3 bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl px-4 py-3 border border-gray-100"
+              >
+                <CheckCircle2 className="w-5 h-5 text-[#0047b2] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-800 text-sm md:text-base">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-800 text-lg font-semibold leading-relaxed">
+            Every enquiry is handled with care, sensitivity and complete confidentiality.
+          </p>
+        </div>
+      </div>
+
+      {/* People Tracing */}
+      <div className="py-10 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl text-left">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">People Tracing</h3>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            If you have lost contact with someone important, our investigators can help locate individuals throughout the UK and internationally.
+          </p>
+          <p className="text-gray-900 font-semibold mb-4">Our tracing services include:</p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {tracingItems.map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-3 bg-white rounded-xl px-4 py-3 border border-gray-100 shadow-sm"
+              >
+                <CheckCircle2 className="w-5 h-5 text-[#0047b2] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-800 text-sm md:text-base">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Lifestyle Investigations */}
+      <div className="py-10 bg-white">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl space-y-4 text-left">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900">Lifestyle Investigations</h3>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Changes in behaviour can sometimes raise legitimate concerns.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our investigators can discreetly establish factual information regarding an individual’s movements and activities where there is a lawful and legitimate reason to do so.
+          </p>
+        </div>
+      </div>
+
+      {/* Covert Surveillance */}
+      <div className="py-10 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl space-y-4 text-left">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900">Covert Surveillance</h3>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Professional covert surveillance remains one of the most effective investigative techniques available.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our experienced surveillance teams operate discreetly throughout the UK, obtaining evidence through carefully planned surveillance operations.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Where appropriate, clients receive detailed reports supported by photographic and video evidence.
+          </p>
+        </div>
+      </div>
+
+      {/* Why Choose */}
+      <div className="py-14 bg-white">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-left">
+            Why Choose Lantern Investigations?
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6 text-left">
+            With over 25 years of investigative experience, Lantern Investigations has built a reputation for delivering professional, discreet and results-driven investigations.
+          </p>
+          <p className="text-gray-900 font-semibold mb-4 text-left">Clients choose us because we provide:</p>
+          <div className="grid sm:grid-cols-2 gap-3 mb-6">
+            {whyChoose.map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-3 bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl px-4 py-3 border border-gray-100"
+              >
+                <CheckCircle2 className="w-5 h-5 text-[#0047b2] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-800 text-sm md:text-base">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-700 text-lg leading-relaxed text-left">
+            We understand that every personal investigation involves sensitive circumstances, which is why we approach every case with professionalism, integrity and complete discretion.
+          </p>
+        </div>
+      </div>
+
+      {/* Process */}
+      <div className="py-16 md:py-20 bg-[#0f172a] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,71,178,0.25),transparent_50%)]" />
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mont tracking-tight">
+              Our Investigation Process
+            </h2>
+          </div>
+
+          <div className="hidden lg:block relative">
+            <div className="absolute top-10 left-[12%] right-[12%] h-px bg-blue-500/40" />
+            <div className="grid grid-cols-4 gap-6">
+              {process.map((step) => {
+                const Icon = step.icon;
+                return (
+                  <div key={step.number} className="text-center relative">
+                    <div className="mx-auto mb-6 w-20 h-20 rounded-full bg-[#0047b2] border-4 border-[#0f172a] shadow-lg shadow-blue-900/40 flex items-center justify-center relative z-10">
+                      <Icon className="w-8 h-8 text-white" strokeWidth={1.75} />
+                    </div>
+                    <p className="text-blue-300 text-sm font-semibold tracking-widest mb-2">
+                      STEP {step.number}
+                    </p>
+                    <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed max-w-xs mx-auto">
+                      {step.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="lg:hidden space-y-0 max-w-xl mx-auto">
+            {process.map((step, index) => {
+              const Icon = step.icon;
+              const isLast = index === process.length - 1;
+              return (
+                <div key={step.number} className="flex gap-4">
+                  <div className="flex flex-col items-center">
+                    <div className="w-14 h-14 rounded-full bg-[#0047b2] flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-6 h-6 text-white" strokeWidth={1.75} />
+                    </div>
+                    {!isLast && <div className="w-px flex-1 bg-blue-500/40 my-2 min-h-[2rem]" />}
+                  </div>
+                  <div className={`pb-8 ${isLast ? 'pb-0' : ''}`}>
+                    <p className="text-blue-300 text-xs font-semibold tracking-widest mb-1">
+                      STEP {step.number}
+                    </p>
+                    <h3 className="text-lg font-bold mb-2">{step.title}</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">{step.description}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="py-14 bg-white">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-4xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div
+                key={faq.q}
+                className="border border-gray-200 rounded-2xl overflow-hidden shadow-sm"
+              >
+                <button
+                  type="button"
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full flex items-center justify-between text-left px-5 py-4 md:px-6 md:py-5 bg-gray-50 hover:bg-gray-100 transition-colors"
+                >
+                  <span className="text-base md:text-lg font-semibold text-gray-900 pr-4 text-left flex-1">
+                    {faq.q}
+                  </span>
+                  <span className="text-gray-600 text-xl flex-shrink-0">
+                    {openFaq === index ? '−' : '+'}
+                  </span>
+                </button>
+                {openFaq === index && (
+                  <div className="px-5 py-4 md:px-6 md:py-6 bg-white text-gray-700 leading-relaxed text-left">
+                    <p className="text-left">{faq.a}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Contact CTA */}
+      <div className="py-14 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-4xl text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+            Speak to an Experienced Private Investigator
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+            If you’re looking to hire a private investigator for a personal investigation, relationship investigation, infidelity investigation, background investigation, people tracing or covert surveillance, Lantern Investigations is here to help.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+            Our experienced investigators provide confidential, professional and discreet investigation services throughout the UK.
+          </p>
+          <p className="text-gray-800 text-lg font-semibold mb-8">
+            Contact Lantern Investigations today for a free, confidential consultation and let our experienced private investigators help you uncover the truth.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block px-8 py-4 bg-[#0047b2] text-white rounded-lg shadow-md hover:bg-[#003080] transition-colors font-semibold text-lg"
+          >
+            Speak With An Investigator
+          </Link>
         </div>
       </div>
     </section>
   );
 };
 
-export default PersonalInvestigation;
+export default Personal;

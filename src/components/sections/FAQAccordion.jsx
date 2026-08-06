@@ -5,25 +5,21 @@ const FAQAccordion = () => {
 
   const faqs = [
     {
-      q: 'How Much Does a Private Investigator Cost?',
-      a: "If you're asking, 'How much does a private investigator cost?' the answer depends on the type of investigation required. At Lantern Investigations, we provide affordable private investigator services tailored to your needs. Whether you need a detective private eye, legal investigator, or corporate private investigator, our pricing is transparent, competitive, and designed to deliver results."
+      q: 'Are investigations confidential?',
+      a: 'Yes. Every enquiry is handled with complete discretion and confidentiality.',
     },
     {
-      q: 'What Types of Investigations Do You Handle?',
-      a: "We specialize in a wide range of investigative services including surveillance, background checks, matrimonial investigations, corporate investigations, fraud detection, missing persons cases, and legal support. Our experienced team uses cutting-edge technology and proven methodologies to deliver accurate results."
+      q: 'Do you operate nationwide?',
+      a: 'Yes. We provide investigation services across England, Scotland, Wales and Northern Ireland, with international capability when required.',
     },
     {
-      q: 'How Long Does a Typical Investigation Take?',
-      a: "The duration of an investigation varies greatly depending on the complexity and scope of the case. Simple background checks may take 2-5 business days, while complex surveillance or fraud investigations can take several weeks. We provide realistic timelines during our initial consultation and keep you updated throughout the process."
+      q: 'Can investigations begin quickly?',
+      a: 'Subject to availability, many investigations can begin within 24 hours.',
     },
     {
-      q: 'Is Everything Confidential and Discreet?',
-      a: "Absolutely. Confidentiality is the cornerstone of our business. All investigations are conducted with the utmost discretion, and we maintain strict confidentiality agreements. Your privacy and the integrity of the investigation are our top priorities. We never compromise on discretion."
+      q: 'Will I receive evidence?',
+      a: 'Yes. Where applicable, you’ll receive a detailed investigation report supported by photographic, video and written evidence.',
     },
-    {
-      q: 'What Information Do You Need to Start an Investigation?',
-      a: "The information required depends on the type of investigation. Generally, we need basic details about the subject, your objectives, and any relevant background information. During our free consultation, we'll discuss exactly what information would be helpful and what we can work with to achieve the best results."
-    }
   ];
 
   const toggleFAQ = (index) => {
@@ -50,7 +46,7 @@ const FAQAccordion = () => {
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-panel-${index}`}
               >
-                <span className="text-base md:text-lg font-semibold text-gray-900 pr-4">
+                <span className="text-base md:text-lg font-semibold text-gray-900 pr-4 text-left flex-1">
                   {faq.q}
                 </span>
                 <span className="ml-4 text-gray-600 text-xl md:text-2xl select-none flex-shrink-0">
@@ -59,8 +55,11 @@ const FAQAccordion = () => {
               </button>
 
               {openIndex === index && (
-                <div id={`faq-panel-${index}`} className="px-5 py-4 md:px-6 md:py-6 bg-white text-gray-700 leading-relaxed">
-                  <p>{faq.a}</p>
+                <div
+                  id={`faq-panel-${index}`}
+                  className="px-5 py-4 md:px-6 md:py-6 bg-white text-gray-700 leading-relaxed text-left"
+                >
+                  <p className="text-left">{faq.a}</p>
                 </div>
               )}
             </div>
@@ -72,5 +71,3 @@ const FAQAccordion = () => {
 };
 
 export default FAQAccordion;
-
-

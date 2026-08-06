@@ -1,67 +1,41 @@
-import React from "react";
+import React from 'react';
 import ServicesGrid from '../ServicesGrid.jsx';
 import SEO from '../SEO';
 
 const Services = () => {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Private Investigation Services",
-    "description": "Professional investigation services including covert surveillance, fraud investigation, missing persons, personal investigations, and background checks.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Lantern Investigations",
-      "url": "https://hendersonthomasinvestigations.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "51 Lime Street",
-        "addressLocality": "London",
-        "postalCode": "EC3M 7DQ",
-        "addressCountry": "GB"
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Professional Private Investigation Services',
+    description:
+      'Trusted private investigators across the UK offering covert surveillance, background checks, fraud investigations, corporate investigations, personal investigations, missing person enquiries, people tracing and international investigations.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Lantern Investigations',
+      url: 'https://www.lanterninvestigations.com',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '51 Lime Street',
+        addressLocality: 'London',
+        postalCode: 'EC3M 7DQ',
+        addressCountry: 'GB',
       },
-      "telephone": "07979 359508",
-      "email": "info@lanterninvestigations.com"
+      telephone: '07979 359508',
+      email: 'info@lanterninvestigations.com',
     },
-    "serviceType": "Private Investigation",
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
+    serviceType: 'Private Investigation',
+    areaServed: {
+      '@type': 'Country',
+      name: 'United Kingdom',
     },
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "Covert Surveillance",
-        "description": "Discreet surveillance services for legal, personal, and corporate matters"
-      },
-      {
-        "@type": "Offer", 
-        "name": "Fraud Investigation",
-        "description": "Professional fraud investigation and evidence gathering services"
-      },
-      {
-        "@type": "Offer",
-        "name": "Missing Persons Investigation", 
-        "description": "Expert missing persons location and tracing services"
-      },
-      {
-        "@type": "Offer",
-        "name": "Personal Investigation",
-        "description": "Confidential personal investigation services for sensitive matters"
-      },
-      {
-        "@type": "Offer",
-        "name": "Background Check Services",
-        "description": "Comprehensive background verification and screening services"
-      }
-    ]
   };
 
   return (
     <section className="bg-gray-50 pt-16 md:pt-20">
-      <SEO 
-        title="Our Services - Professional Private Investigation Services | Lantern Investigations"
-        description="Professional private investigation services including covert surveillance, fraud investigation, missing persons, personal investigations, and background checks. Expert investigators serving London and UK."
-        keywords="private investigation services, covert surveillance, fraud investigation, missing persons, personal investigation, background checks, private detective London, investigation services UK"
+      <SEO
+        title="Professional Private Investigation Services | Lantern Investigations"
+        description="Trusted private investigators across the UK. Covert surveillance, background checks, fraud investigations, corporate investigations, personal investigations, missing persons, people tracing and international investigations."
+        keywords="private investigation services UK, hire a private investigator, private detective, covert surveillance, background checks, fraud investigation, corporate investigations, missing persons, people tracing"
         url="/our-services"
         structuredData={structuredData}
       />

@@ -97,7 +97,7 @@ const BlogPage = () => {
         structuredData={structuredData}
       />
       {/* Page Header - Full Width */}
-      <section className="relative mb-14 h-80">
+      <section className="relative mb-14 h-96 md:h-[500px]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -146,7 +146,7 @@ const BlogPage = () => {
                     <img
                       src={getImageUrl({ fields: { file: { url: post.featuredImage } } })}
                       alt={post.title}
-                      className="w-full h-48 object-cover"
+                      className="w-full h-64 object-cover"
                     />
                   </div>
                 )}

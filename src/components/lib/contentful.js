@@ -1,32 +1,45 @@
 import { createClient } from 'contentful';
 
-// Contentful configuration
-const SPACE_ID = import.meta.env.VITE_CONTENTFUL_SPACE_ID || 'babc4mhdh1yv';
-const ACCESS_TOKEN = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN || 'qvCEq4p4NScALtr1yGyDRHxfgcvXa_hkTNfSlJSKtCw';
-const PREVIEW_ACCESS_TOKEN = import.meta.env.VITE_CONTENTFUL_PREVIEW_ACCESS_TOKEN || 'J01YndLVqAudpMZmeKmAuCCG69Ldr-wP56ro_s_83_0';
+// New Contentful account: set these in .env (local) and Vercel env (production)
+const SPACE_ID = import.meta.env.VITE_CONTENTFUL_SPACE_ID;
+const ACCESS_TOKEN = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
+const PREVIEW_ACCESS_TOKEN = import.meta.env.VITE_CONTENTFUL_PREVIEW_ACCESS_TOKEN;
+
+if (!SPACE_ID || !ACCESS_TOKEN) {
+  console.error(
+    'Contentful is not configured. Add VITE_CONTENTFUL_SPACE_ID and VITE_CONTENTFUL_ACCESS_TOKEN to your .env file.'
+  );
+}
 
 // Create Contentful client for published content
-export const client = createClient({
-  space: SPACE_ID,
-  accessToken: ACCESS_TOKEN,
-});
+export const client =
+  SPACE_ID && ACCESS_TOKEN
+    ? createClient({
+        space: SPACE_ID,
+        accessToken: ACCESS_TOKEN,
+      })
+    : null;
 
 // Create Contentful client for preview/draft content
-export const previewClient = createClient({
-  space: SPACE_ID,
-  accessToken: PREVIEW_ACCESS_TOKEN,
-  host: 'preview.contentful.com',
-});
+export const previewClient =
+  SPACE_ID && PREVIEW_ACCESS_TOKEN
+    ? createClient({
+        space: SPACE_ID,
+        accessToken: PREVIEW_ACCESS_TOKEN,
+        host: 'preview.contentful.com',
+      })
+    : null;
 
-// Blog post content type ID - update this to match your Contentful content type ID
+// Must match the Content Type ID in Contentful (Api Identifier)
 const BLOG_POST_CONTENT_TYPE = 'blogPost';
 
 // Fetch all blog posts (published content)
 export const getBlogPosts = async () => {
+  if (!client) return [];
   try {
     const response = await client.getEntries({
       content_type: BLOG_POST_CONTENT_TYPE,
-      order: '-fields.publishedDate', // Order by published date (most recent first)
+      order: '-fields.publishedDate',
     });
     return response.items;
   } catch (error) {
@@ -37,10 +50,11 @@ export const getBlogPosts = async () => {
 
 // Fetch all blog posts including drafts (preview content)
 export const getBlogPostsPreview = async () => {
+  if (!previewClient) return [];
   try {
     const response = await previewClient.getEntries({
       content_type: BLOG_POST_CONTENT_TYPE,
-      order: '-fields.publishedDate', // Order by published date (most recent first)
+      order: '-fields.publishedDate',
     });
     return response.items;
   } catch (error) {
@@ -51,6 +65,7 @@ export const getBlogPostsPreview = async () => {
 
 // Fetch a single blog post by slug (published content)
 export const getBlogPostBySlug = async (slug) => {
+  if (!client) return null;
   try {
     const response = await client.getEntries({
       content_type: BLOG_POST_CONTENT_TYPE,
@@ -65,6 +80,7 @@ export const getBlogPostBySlug = async (slug) => {
 
 // Fetch a single blog post by slug including drafts (preview content)
 export const getBlogPostBySlugPreview = async (slug) => {
+  if (!previewClient) return null;
   try {
     const response = await previewClient.getEntries({
       content_type: BLOG_POST_CONTENT_TYPE,
@@ -79,6 +95,7 @@ export const getBlogPostBySlugPreview = async (slug) => {
 
 // Fetch a single blog post by ID
 export const getBlogPostById = async (id) => {
+  if (!client) return null;
   try {
     const response = await client.getEntry(id);
     return response;
@@ -91,13 +108,13 @@ export const getBlogPostById = async (id) => {
 // Helper function to format blog post data
 export const formatBlogPost = (post) => {
   if (!post) return null;
-  
+
   return {
     id: post.sys.id,
     title: post.fields.title,
     slug: post.fields.slug,
-    excerpt: post.fields.excerpt, // Keep as rich text object
-    content: post.fields.content, // Keep as rich text object
+    excerpt: post.fields.excerpt,
+    content: post.fields.content,
     featuredImage: post.fields.featuredImage?.fields?.file?.url,
     author: post.fields.author || 'Lantern Investigations',
     publishedDate: post.fields.publishedDate || post.sys.createdAt,

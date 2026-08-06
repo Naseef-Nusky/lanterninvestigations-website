@@ -23,7 +23,12 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 text-left">
               <div className="flex items-center">
                 <span className="mr-2">📞</span>
-                <span className="text-sm md:text-base font-semibold">07979 359508</span>
+                <a
+                  href="tel:07979359508"
+                  className="text-sm md:text-base font-semibold hover:text-blue-600 transition-colors duration-300"
+                >
+                  07979 359508
+                </a>
               </div>
               <div className="flex items-center">
                  <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
@@ -102,11 +107,21 @@ const Footer = () => {
               </div>
               <div>
                 <p className="font-semibold mb-1">📧 Email</p>
-                <p>info@lanterninvestigations.com</p>
+                <a
+                  href="mailto:info@lanterninvestigations.com"
+                  className="hover:text-blue-600 transition-colors duration-300"
+                >
+                  info@lanterninvestigations.com
+                </a>
               </div>
               <div>
                 <p className="font-semibold mb-1">📞 Phone</p>
-                <p>07979 359508</p>
+                <a
+                  href="tel:07979359508"
+                  className="hover:text-blue-600 transition-colors duration-300"
+                >
+                  07979 359508
+                </a>
               </div>
             </div>
           </div>

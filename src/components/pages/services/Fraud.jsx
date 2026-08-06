@@ -1,188 +1,278 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { CheckCircle2 } from 'lucide-react';
 import SEO from '../../SEO';
+
 const FraudInvestigation = () => {
+  const employeeFraud = [
+    'Employee theft',
+    'Expense fraud',
+    'Time theft',
+    'Unauthorised secondary employment',
+    'Abuse of company resources',
+    'Dishonest conduct',
+    'Breaches of trust',
+  ];
+
+  const blackmailAssist = [
+    'Identifying the individual responsible where possible',
+    'Gathering and preserving evidence',
+    'Investigating online activity',
+    'Supporting clients with evidence suitable for legal advisers or law enforcement where appropriate',
+    'Advising on practical next steps while maintaining complete confidentiality',
+  ];
+
+  const corporateServices = [
+    'Internal fraud investigations',
+    'Procurement fraud',
+    'Director misconduct',
+    'Shareholder disputes',
+    'Supplier fraud',
+    'Due diligence investigations',
+    'Asset tracing',
+    'Corporate intelligence',
+  ];
+
+  const legalOptions = [
+    'Civil recovery claims',
+    'Asset recovery',
+    'Recovery of monies obtained through fraud',
+    'Injunctions where appropriate',
+    'Legal advice regarding financial losses',
+    'Representation through specialist fraud solicitors',
+  ];
+
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Fraud Investigation Services",
-    "description": "Professional fraud investigation services to protect against deception and financial wrongdoing. Expert fraud investigators by Lantern Investigations.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Lantern Investigations",
-      "url": "https://hendersonthomasinvestigations.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "51 Lime Street",
-        "addressLocality": "London",
-        "postalCode": "EC3M 7DQ",
-        "addressCountry": "GB"
-      },
-      "telephone": "07979 359508",
-      "email": "info@lanterninvestigations.com"
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Fraud Investigation Services',
+    description:
+      'Professional fraud investigation services for employee fraud, insurance fraud, financial fraud, identity fraud, romance fraud, blackmail and corporate fraud across the UK.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Lantern Investigations',
+      url: 'https://www.lanterninvestigations.com',
+      telephone: '07979 359508',
+      email: 'info@lanterninvestigations.com',
     },
-    "serviceType": "Fraud Investigation",
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    },
-    "offers": {
-      "@type": "Offer",
-      "name": "Fraud Investigation Services",
-      "description": "Comprehensive fraud investigation including scam detection, financial deception, and identity theft investigation",
-      "price": "Contact for quote",
-      "availability": "InStock"
-    }
+    serviceType: 'Fraud Investigation',
+    areaServed: { '@type': 'Country', name: 'United Kingdom' },
   };
 
   return (
     <section className="bg-gray-50 pt-16 md:pt-20">
-      <SEO 
-        title="Fraud Investigation Services - Protect Against Deception | Lantern Investigations"
-        description="Professional fraud investigation services to protect against deception and financial wrongdoing. Expert fraud investigators by Lantern Investigations."
-        keywords="fraud investigation, fraud detection, scam investigation, financial fraud, identity theft investigation, fraud investigator London, fraud services UK"
+      <SEO
+        title="Fraud Investigation Services UK | Lantern Investigations"
+        description="Professional fraud investigation services for employee, insurance, financial, identity, romance and corporate fraud. Experienced investigators across the UK."
+        keywords="fraud investigation UK, employee fraud, insurance fraud, financial fraud, identity fraud, romance fraud, corporate fraud investigation, private investigator fraud"
         url="/service/fraud"
         structuredData={structuredData}
       />
-      {/* Hero Section with Background Image */}
+
+      {/* Hero */}
       <div
         className="relative w-full h-96 md:h-[500px] flex items-center justify-center text-center"
         style={{
           backgroundImage: `url('/fraud.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-        {/* Hero Text */}
-        <div className="relative z-10 px-6">
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 px-6 max-w-4xl">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            Fraud Investigation Service
+            Fraud Investigation Services
           </h1>
-          <p className="text-lg md:text-2xl text-[#ffd700] font-semibold">
-            Protecting You Against Deception & Financial Wrongdoing
+          <p className="text-lg md:text-2xl text-blue-100 font-semibold">
+            Professional Fraud Investigations Across the UK
           </p>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 py-12 space-y-10 text-left md:text-justify">
-        {/* Intro */}
-        <div className="space-y-4">
-          <p className="text-gray-700 leading-relaxed">
-            Fraud investigation services are crucial in protecting both
-            individuals and businesses from the risks of deception and financial
-            wrongdoing. In today’s world, where fraud can cause significant
-            harm, these services play an important role in detecting,
-            preventing, and addressing fraudulent activities.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            As fraud becomes more complex, having the right expertise is key to
-            handling it effectively. At Lantern Investigations, our
-            team of experienced fraud investigators is here to help. We use our
-            skills and knowledge to uncover fraudulent activities, ensuring that
-            we handle every case with care and accuracy. Let us assist you in
-            safeguarding your assets and taking the right steps to fight fraud.
+      {/* Types intro */}
+      <div className="bg-white py-14">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl text-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+            Types of Fraud We Investigate
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our experienced fraud investigators assist private individuals, businesses and legal professionals with a wide range of fraud investigations throughout the UK.
           </p>
         </div>
+      </div>
 
-        {/* What is Fraud Investigation */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-gray-800">
-            What Is Fraud Investigation?
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            Fraud is a widespread problem that can severely impact businesses
-            and individuals. It includes various dishonest activities aimed at
-            gaining money through deceitful means, such as embezzlement, tax
-            avoidance and evasion, identity theft, and cybercrimes. These
-            fraudulent acts can result in significant financial losses and harm
-            an organisation’s reputation.
+      {/* Employee Fraud */}
+      <div className="py-14 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl text-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Employee Fraud</h2>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            Internal fraud can have a significant financial impact on any business.
           </p>
-          <p className="text-gray-700 leading-relaxed">
-            Fraud investigation services play a vital role in combating fraud.
-            These services involve carefully reviewing digital records, witness
-            statements, and other evidence to detect and prevent fraudulent
-            activities. They help identify the risks and ensure that businesses
-            and individuals are protected from financial harm.
-          </p>
-        </div>
-
-        {/* Why Choose Us */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-gray-800">
-            Why Choose Lantern Investigations?
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            At Lantern Investigations, we bring years of experience and
-            expertise to fraud and criminal investigations. Our team consists of
-            certified professionals who have successfully handled cases across a
-            wide range of industries. We utilise the latest technology and
-            advanced tools to uncover fraudulent activities and protect our
-            clients’ interests.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            Our team’s qualifications include certifications in fraud
-            examination, criminal investigations, forensic accounting, and
-            digital forensics. These credentials highlight our commitment to
-            maintaining the highest industry standards. We continuously update
-            our skills and knowledge to stay ahead of the rapidly changing
-            landscape of fraud and ensure effective investigations.
-          </p>
-        </div>
-
-        {/* Key Features */}
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-gray-800">
-            Key Features Of Our Fraud Investigation Service
-          </h2>
-
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-gray-800">Data Analysis</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Our experts use advanced data analysis methods to carefully
-              examine financial records and transactions. By identifying
-              patterns and anomalies, we can uncover hidden irregularities that
-              may suggest fraudulent behaviour, helping to pinpoint risks and
-              vulnerabilities within financial systems.
-            </p>
-
-            <h3 className="text-xl font-semibold text-gray-800">
-              Digital Forensics
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              As fraud increasingly takes place in the digital world, our team
-              uses cutting-edge digital forensic techniques to examine
-              electronic evidence, such as emails, social media communications,
-              and digital transactions. This helps us trace the origins of
-              fraudulent activities and gather critical evidence.
-            </p>
-
-            <h3 className="text-xl font-semibold text-gray-800">
-              Confidentiality & Legal Compliance
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              We understand the sensitive nature of fraud investigations, which
-              is why confidentiality is our top priority. Our team operates
-              discreetly to protect our client’s sensitive information, ensuring
-              that all processes comply with legal and ethical standards. This
-              adherence to best practices guarantees that our investigations
-              stand up to scrutiny in legal proceedings.
-            </p>
+          <p className="text-gray-900 font-semibold mb-4">We investigate:</p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {employeeFraud.map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-3 bg-white rounded-xl px-4 py-3 border border-gray-100 shadow-sm"
+              >
+                <CheckCircle2 className="w-5 h-5 text-[#0047b2] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-800 text-sm md:text-base">{item}</span>
+              </div>
+            ))}
           </div>
         </div>
+      </div>
 
-        {/* CTA */}
-        <div className="mt-12 text-center">
-<Link
-  to="/contact"
-  className="inline-block px-6 py-3 bg-[#0047b2] text-white rounded-lg shadow-md hover:bg-[#003080] transition-colors font-semibold"
->
-  Contact Us Today
-</Link>
+      {/* Insurance Fraud */}
+      <div className="py-14 bg-white">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl space-y-4 text-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Insurance Fraud</h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            False or exaggerated insurance claims can result in substantial financial losses.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our investigators gather evidence through surveillance, witness enquiries and professional investigation techniques to establish the facts.
+          </p>
+        </div>
+      </div>
+
+      {/* Financial Fraud */}
+      <div className="py-14 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl space-y-4 text-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Financial Fraud</h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Financial fraud can occur in both personal and commercial settings.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            We investigate allegations involving financial deception, misrepresentation, hidden transactions and dishonest conduct to help clients understand exactly what has occurred.
+          </p>
+        </div>
+      </div>
+
+      {/* Identity Fraud */}
+      <div className="py-14 bg-white">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl space-y-4 text-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Identity Fraud</h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Identity theft is becoming increasingly common.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            If you believe your identity has been misused or someone is using false details for financial gain, our investigators can carry out a professional investigation to establish the facts.
+          </p>
+        </div>
+      </div>
+
+      {/* Romance Fraud */}
+      <div className="py-14 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl space-y-4 text-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Romance Fraud</h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Online dating scams continue to affect thousands of people every year.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            If you believe someone has entered into a relationship with the intention of obtaining money through deception, our investigators can discreetly establish the true identity of the individual, verify their claims and gather evidence where appropriate.
+          </p>
+        </div>
+      </div>
+
+      {/* Blackmail & Sextortion */}
+      <div className="py-14 bg-white">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl text-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Blackmail & Sextortion Investigations
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+            Being subjected to blackmail, online blackmail or sextortion can be extremely distressing.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            Our experienced investigators provide confidential support for clients who are being threatened, extorted or coerced into making payments.
+          </p>
+          <p className="text-gray-900 font-semibold mb-4">We can assist by:</p>
+          <div className="space-y-3 mb-6">
+            {blackmailAssist.map((item) => (
+              <div key={item} className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-[#0047b2] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-800 text-base md:text-lg leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-800 text-lg font-semibold leading-relaxed">
+            Every blackmail investigation is handled with professionalism, discretion and sensitivity.
+          </p>
+        </div>
+      </div>
+
+      {/* Corporate Fraud */}
+      <div className="py-14 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl text-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Corporate Fraud Investigations
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            We help businesses investigate suspected fraud, financial irregularities and dishonest conduct.
+          </p>
+          <p className="text-gray-900 font-semibold mb-4">
+            Our corporate investigation services include:
+          </p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {corporateServices.map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-3 bg-white rounded-xl px-4 py-3 border border-gray-100 shadow-sm"
+              >
+                <CheckCircle2 className="w-5 h-5 text-[#0047b2] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-800 text-sm md:text-base">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Legal Support */}
+      <div className="py-14 bg-white">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl text-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Legal Support & Recovery of Financial Losses
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            Where a fraud investigation identifies evidence of financial loss, Lantern Investigations can, where appropriate, introduce clients to experienced solicitors who may be able to advise on recovering stolen funds or pursuing civil claims.
+          </p>
+          <p className="text-gray-900 font-semibold mb-4">
+            Depending on the circumstances of your case, legal options may include:
+          </p>
+          <div className="grid sm:grid-cols-2 gap-3 mb-6">
+            {legalOptions.map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-3 bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl px-4 py-3 border border-gray-100"
+              >
+                <CheckCircle2 className="w-5 h-5 text-[#0047b2] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-800 text-sm md:text-base">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            While every case is different and outcomes cannot be guaranteed, working alongside experienced legal professionals means clients can receive advice on the options available once the investigation has concluded.
+          </p>
+        </div>
+      </div>
+
+      {/* Contact CTA */}
+      <div className="py-14 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-4xl text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+            Speak With a Fraud Investigator
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed mb-8">
+            Contact Lantern Investigations today for a free, confidential consultation about your fraud investigation enquiry.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block px-8 py-4 bg-[#0047b2] text-white rounded-lg shadow-md hover:bg-[#003080] transition-colors font-semibold text-lg"
+          >
+            Speak With An Investigator
+          </Link>
         </div>
       </div>
     </section>
